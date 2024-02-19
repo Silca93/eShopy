@@ -1,10 +1,10 @@
 import React from 'react'
 import Card from '../Card/Card'
 
-export default function Body() {
+export default function Body({data}) {
   return (
     <div className="body">
-        <Card />
+        <Card data={data}/>
      
 
 

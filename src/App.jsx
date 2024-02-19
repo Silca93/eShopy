@@ -14,7 +14,7 @@ function App() {
 
   return (
     <div className="">
-      <Body/>
+      <Body data={DATA}/>
     </div>
     // <div className="main w-screen h-screen bg-yellow-300">
     //   <Card />
