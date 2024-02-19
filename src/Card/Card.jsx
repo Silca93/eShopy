@@ -8,7 +8,7 @@ export default function Card({data, star}) {
           Shopping cart
         </div>
       </div>
-      <div className="mid w-full h-[50%] bg-gray-300  flex justify-center">
+      <div className="mid w-full h-[50%] bg-white  flex justify-center">
       <img src={data.produits[0].image} alt="" srcset="" />
       </div>
       <div className="bot w-full h-[40%] bg-[#403D39] rounded-b-lg">

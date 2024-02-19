@@ -7,6 +7,7 @@ import logo from './assets/images/logo.png'
 
 import Card from './Card/Card'
 import Body from './Body/Body'
+import Header from './Header/Header'
 import DATA from './assets/data/nestech.json'
 
 function App() {
@@ -16,7 +17,7 @@ function App() {
 
   return (
     <div className="">
-      <Body data={DATA} star={star}/>
+      <Body data={DATA} star={star} logo={logo}/>
       
     </div>
     // <div className="main w-screen h-screen bg-yellow-300">
