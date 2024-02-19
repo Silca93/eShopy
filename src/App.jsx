@@ -1,8 +1,10 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+
+import star from './assets/images/Star_icon_stylized.svg.png'
+
 import logo from './assets/images/logo.png'
+
 import Card from './Card/Card'
 import Body from './Body/Body'
 import DATA from './assets/data/nestech.json'
@@ -14,7 +16,8 @@ function App() {
 
   return (
     <div className="">
-      <Body data={DATA}/>
+      <Body data={DATA} star={star}/>
+      
     </div>
     // <div className="main w-screen h-screen bg-yellow-300">
     //   <Card />
