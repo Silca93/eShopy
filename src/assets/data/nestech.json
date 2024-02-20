@@ -7,6 +7,78 @@
         "rating": "4.75",
         "image": "https://media.materiel.net/r900/products/MN0006094152.jpg",
         "quantity": 4
+        },
+        {
+            "name": "MSI GeForce RTX 4060",
+            "description": "The MSI GeForce RTX 4060 VENTUS 2X BLACK 8G OC GPU offers the full power of NVIDIA's Ada Lovelace architecture, along with the combined might of ray tracing and DLSS3. Build your ultimate gaming PC setup for optimal 1080p performance!",
+            "price": 349.95,
+            "rating": "4.66",
+            "image": "https://media.materiel.net/r900/products/MN0006047525.jpg",
+            "quantity": 5
+        },
+        {
+            "name": "Asus TUF GAMING B760",
+            "description": "The Asus TUF GAMING B760-PLUS WIFI motherboard is designed for users seeking essential features to harness the power of 13th generation Intel Core processors. It supports PCIe 5.0 for graphics cards and DDR5 memory starting from 4800MHz. For storage, it includes PCIe 4.0 M.2 SSD slots.",
+            "price": 205.95,
+            "rating": "4.87",
+            "image": "https://media.materiel.net/r900/products/MN0006055304.jpg",
+            "quantity": 10
+        },
+        {
+            "name": "Samsung 980 Pro - 1 To",
+            "description": "The Samsung 980 Pro M.2 NVMe SSD revamps Samsung's M.2 SSD lineup with high-performance technology. Targeted at gamers and high-performance workstation users, the 980 Pro series offers stunning performance, superior reliability, and a variety of capacities. Elevate your system to the next level with record-breaking speeds of up to 7000 MB/s read and 5000 MB/s write.",
+            "price": 129.95,
+            "rating": "4.85",
+            "image": "https://media.materiel.net/r900/products/MN0005729553_1.jpg",
+            "quantity": 7
+        },
+        {
+            "name": "Corsair Vengeance RGB Black - 2 x 16 Go",
+            "description": "Introducing the Vengeance series, offering greater bandwidth than DDR4 and excellent long-term performance. Designed with enhanced PCB cooling and widespread automatic power regulation, it ensures reliability. Plus, benefit from optimized profiles for AMD systems.",
+            "price": 197.94,
+            "rating": "4.75",
+            "image": "https://media.materiel.net/r900/products/MN0005987796.jpg",
+            "quantity": 5
+        },
+        {
+            "name": "ASUS TUF Gaming Monitor",
+            "description": "The Asus TUF VG32VQ1BR gaming monitor sets high standards with its 32-inch curved display and 165Hz refresh rate! Equipped with ELMB (Extreme Low Motion Blur) and FreeSync technologies, it enhances your gaming experience with GamePlus. With a 1ms response time, HDR support, and WQHD resolution (2560 x 1440 pixels), it delivers precise and realistic images.",
+            "price": 399.94,
+            "rating": "4.75",
+            "image": "https://media.materiel.net/r900/products/MN0005848917_1.jpg",
+            "quantity": 3
+        },
+        {
+            "name": "Razer Basilisk V3",
+            "description": "With the Razer Basilisk V3 mouse, achieve precision and optimal performance to outmatch your opponents. Featuring the Razer Focus+ optical sensor with 26,000 DPI and 11 programmable buttons, it provides the ultimate gaming experience..",
+            "price": 59.95,
+            "rating": "4.67",
+            "image": "https://media.materiel.net/r900/products/MN0005882677_1.jpg",
+            "quantity": 4
+        },
+        {
+            "name": "Cooler Master Masterbaiter Q300L",
+            "description": "The CoolerMaster Q300L PC case, in micro ATX form factor and with a modular design, blends compactness with versatility! It can be positioned horizontally or vertically and is ready to accommodate top-market components for your gaming setup needs!.",
+            "price": 49.96,
+            "rating": "4.93",
+            "image": "https://media.materiel.net/r900/oproducts/AR201712210047_g1.jpg",
+            "quantity": 4
+        },
+        {
+            "name": "Samsung HW-Q60B",
+            "description": "The Samsung HW-Q60B soundbar, with a wireless subwoofer, delivers 3.1 channel sound. With 7 speakers and a total power of 340 Watts, enjoy immersive Dolby Atmos and DTS Virtual:X experiences for movies and series. It features Bluetooth and 4K HDR HDMI connectivity. Plus, Gaming Pro mode ensures optimal gaming conditions.",
+            "price": 229.00,
+            "rating": "4.71",
+            "image": "https://media.materiel.net/r900/products/MN0005959589.jpg",
+            "quantity": 3
+        },
+        {
+            "name": "Logitech G Pro X",
+            "description": "The Logitech G Pro gaming headset features 50mm Pro-G drivers for powerful and balanced stereo sound in all your games. With its detachable mic and universal connectivity, it's your new gaming partner! ",
+            "price": 119.95,
+            "rating": "4.84",
+            "image": "https://media.materiel.net/r900/products/MN0005407117_1.jpg",
+            "quantity": 2
         }
     ],
     

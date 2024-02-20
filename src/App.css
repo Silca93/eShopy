@@ -5,3 +5,10 @@ body {
   font-style: normal;
   
 }
+
+.bannerDiv {
+  background-image: url(./assets/images/conception-bureau-futuriste.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0px -150px;
+}
