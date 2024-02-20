@@ -21,9 +21,16 @@ import DATA from './assets/data/nestech.json'
 function App() {
   const [count, setCount] = useState(0)
  
+  let budget = 2000;
+
+  let incrementCart = () => {
+    setCount((prevValue) => prevValue + 1)
+    console.log(count);
+  }
+
   return (
     <div className="bg-[#222222]">
-      <Body data={DATA} star={star} logo={logo} fond={bannerImg} chercher={chercher} shop={shopCart} coeur={coeur} money={money}/>
+      <Body data={DATA} star={star} logo={logo} fond={bannerImg} chercher={chercher} shop={shopCart} coeur={coeur} money={money} budget={budget} add={incrementCart}/>
     </div>
   )
 }

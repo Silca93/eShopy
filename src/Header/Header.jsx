@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function Header({logo, chercher, shop, coeur, money}) {
+export default function Header({logo, chercher, shop, coeur, money, budget}) {
   return (
-    <div className="w-full h-[13rem] flex flex-col justify-center items-center mb-5 gap-3">
-        <div className="group w-[98%] h-[45%] bg-[#3B3B3B] rounded-2xl flex sticky z-30 hover:bg-gray-400 hover:outline hover:outline-white">
+    <div className="w-full h-[10rem] flex flex-col justify-center items-center gap-3 px-3">
+        <div className="group w-[98%] h-[50%] bg-[#3B3B3B] rounded-2xl flex sticky z-30 hover:bg-gray-400 hover:outline hover:outline-white ">
             <div className="left h-full w-1/3 text-white flex flex-row justify-start items-center gap-[5rem] text-[1.5rem] pl-6 relative">
                 <a className="hover:underline" href="">Home</a>
                 <a className="hover:underline" href="">Products</a>
@@ -17,7 +17,7 @@ export default function Header({logo, chercher, shop, coeur, money}) {
                      <div className="h-[30px] w-[30px] bg-white rounded-full flex justify-center items-center">
                          <img src={money} alt="" />
                      </div>
-                    <h1 className="text-[1.3rem] text-white pt-1"> $: 2OOO</h1>
+                    <h1 className="text-[1.3rem] text-white pt-1"> $: {budget}</h1>
                 </div> 
                 <div className="left h-[55%] rounded-full w-[9rem] flex gap-2 justify-start pl-3 items-center bg-[#737373]">
                     <div className="loupe">
