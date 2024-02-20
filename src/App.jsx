@@ -25,7 +25,7 @@ function App() {
  
 
   const decrementBudget = (price) => {
-    setBudget((prevValue) => parseFloat(prevValue.toFixed(2) - price.toFixed(2)));
+    setBudget((prevValue) => Math.round(prevValue * 100)/100 - Math.round(price * 100)/100);
     // budget = parseFloat(budget.toFixed(2));
     console.log(budget);
   }

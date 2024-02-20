@@ -14,7 +14,7 @@ export default function Body({data, star, logo, fond, chercher, shop, coeur, mon
 
         <div className="techNest text-white text-[40px] flex justify-center items-center">
         <h1><span class="actual-text">&nbsp;&nbsp;</span>
-        <span aria-hidden="true" class="hover-text">&nbsp;ELEVATE YOUR TECH HABITAT&nbsp;</span></h1>
+        <span aria-hidden="true" class="hover-text">&nbsp;ELEVATE YOUR TECH SPACE&nbsp;</span></h1>
         </div>
 
         <Banner fond={fond}/>
