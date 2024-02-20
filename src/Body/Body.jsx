@@ -2,6 +2,7 @@ import React from 'react'
 import Card from '../Card/Card'
 import Header from '../Header/Header'
 import Banner from '../Banner/Banner'
+import Footer from '../Footer/Footer';
 
 export default function Body({data, star, logo, fond}) {
   console.log(data);
@@ -50,6 +51,9 @@ export default function Body({data, star, logo, fond}) {
 
 
 
+            {/* Footer section start */}
+
+            <Footer />
 
      
     </div>
