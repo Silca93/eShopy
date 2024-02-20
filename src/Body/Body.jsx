@@ -3,6 +3,7 @@ import Card from '../Card/Card'
 import Header from '../Header/Header'
 import Banner from '../Banner/Banner'
 import Footer from '../Footer/Footer';
+import InfoBanner from '../InfoBanner/InfoBanner';
 
 export default function Body({data, star, logo, fond, chercher, shop, coeur, money, budget, add, substract}) {
   console.log(data);
@@ -60,7 +61,7 @@ export default function Body({data, star, logo, fond, chercher, shop, coeur, mon
 
 
 
-
+            <InfoBanner />
 
             {/* Footer section start */}
 
