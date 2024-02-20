@@ -3,17 +3,17 @@ import React from 'react'
 export default function Header({logo, chercher, shop, coeur, money, budget}) {
   return (
     <div className="w-full h-[10rem] flex flex-col justify-center items-center gap-3 px-3">
-        <div className="group w-[98%] h-[50%] bg-[#3B3B3B] rounded-2xl flex sticky z-30 hover:bg-gray-400 hover:outline hover:outline-white ">
+        <div className="group w-[98%] h-[50%] bg-[#3B3B3B] rounded-2xl flex sticky z-30  hover:outline hover:outline-white ">
             <div className="left h-full w-1/3 text-white flex flex-row justify-start items-center gap-[5rem] text-[1.5rem] pl-6 relative">
                 <a className="hover:underline" href="">Home</a>
                 <a className="hover:underline" href="">Products</a>
                 <a className="hover:underline" href="">Contact</a>
             </div>
-            <div className="mid h-full w-1/3 bg-[#3B3B3B] flex justify-center items-center group-hover:bg-gray-400">
+            <div className="mid h-full w-1/3 bg-[#3B3B3B] flex justify-center items-center ">
                 <img src={logo} alt="" width="300px" />
             </div>
             <div className="right h-full w-1/3 flex justify-end gap-6 items-center pr-5">
-                <div className="h-[55%] w-[120px] bg-black rounded-3xl flex justify-center items-center gap-4">
+                <div className="h-[55%] w-[120px] bg-black rounded-3xl flex justify-center items-center gap-4 overflow-hidden">
                      <div className="h-[30px] w-[30px] bg-white rounded-full flex justify-center items-center">
                          <img src={money} alt="" />
                      </div>
