@@ -8,6 +8,7 @@ import logo from './assets/images/logo.png'
 import shopCart from './assets/images/sac-de-courses.png'
 import chercher from './assets/images/chercher.png'
 import coeur from './assets/images/contour-coeur.png'
+import money from './assets/images/account.svg'
 
 // components //
 import Card from './Card/Card'
@@ -22,7 +23,7 @@ function App() {
  
   return (
     <div className="bg-[#222222]">
-      <Body data={DATA} star={star} logo={logo} fond={bannerImg} chercher={chercher} shop={shopCart} coeur={coeur}/>
+      <Body data={DATA} star={star} logo={logo} fond={bannerImg} chercher={chercher} shop={shopCart} coeur={coeur} money={money}/>
     </div>
   )
 }
