@@ -6,11 +6,57 @@ body {
   background-color: #222222;
   overflow-x: hidden;
   
+  
 }
 
 .bannerDiv {
   background-image: url(./assets/images/conception-bureau-futuriste.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: 0px -150px;
+  background-position: 0px -170px;
+}
+
+/* === removing default button style ===*/
+/* .button {
+  margin: 0;
+  height: auto;
+  background: transparent;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+} */
+
+/* button styling */
+.techNest {
+  --border-right: 6px;
+  --text-stroke-color: rgba(255,255,255,0.6);
+  --animation-color: #e3e2e2;
+  --fs-size: 2em;
+  letter-spacing: 3px;
+  text-decoration: none;
+  font-size: var(--fs-size);
+  
+  position: relative;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--text-stroke-color);
+}
+/* this is the text, when you hover on button */
+.hover-text {
+  /* position: absolute; */
+  box-sizing: border-box;
+  content: attr(data-text);
+  color: var(--animation-color);
+  width: 0%;
+  inset: 0;
+  border-top: var(--border-right) solid var(--animation-color);
+  border-left: var(--border-right) solid var(--animation-color);
+  overflow: hidden;
+  transition: 0.4s;
+  -webkit-text-stroke: 1px var(--animation-color);
+}
+/* hover */
+.techNest:hover .hover-text {
+  width: 100%;
+  filter: drop-shadow(0 0 23px var(--animation-color))
 }
