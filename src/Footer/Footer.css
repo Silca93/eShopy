@@ -1,0 +1,15 @@
+
+
+.title_box{
+    /* background-color: red; */
+}
+.title_box span{
+    /* background-color: red; */
+}
+.title_box span:after{
+    content: "";
+    display: block;
+    width: 3rem;
+
+    border-top: 2px solid white;
+}

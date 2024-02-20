@@ -2,6 +2,7 @@ import React from 'react'
 import Card from '../Card/Card'
 import Header from '../Header/Header'
 import Banner from '../Banner/Banner'
+import Footer from '../Footer/Footer';
 
 export default function Body({data, star, logo, fond, chercher, shop, coeur, money, budget, add, substract}) {
   console.log(data);
@@ -61,6 +62,9 @@ export default function Body({data, star, logo, fond, chercher, shop, coeur, mon
 
 
 
+            {/* Footer section start */}
+
+            <Footer />
 
      
     </div>
