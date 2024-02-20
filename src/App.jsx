@@ -19,14 +19,11 @@ import DATA from './assets/data/nestech.json'
 
 function App() {
   const [count, setCount] = useState(0)
-
  
   return (
     <div className="bg-[#222222]">
-      <Body data={DATA} star={star} logo={logo} fond={bannerImg}/>
+      <Body data={DATA} star={star} logo={logo} fond={bannerImg} chercher={chercher} shop={shopCart} coeur={coeur}/>
     </div>
-   
   )
 }
-
 export default App

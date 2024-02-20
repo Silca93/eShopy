@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Card({data, star, key}) {
   return (
-    <div className="card w-[400px] h-[600px] bg-white-500 mx-5 relative">
+    <div className="card w-[400px] h-[600px] bg-white-500 mx-5 mt-5">
       <div className="top w-full h-[10%] bg-[#403D39] flex justify-end items-center rounded-t-lg">
       </div>  
         
@@ -15,7 +15,7 @@ export default function Card({data, star, key}) {
           <h1 className="text-[15px] text-white">{data.description}</h1>
           <div className="rating flex justify-between items-center">
             <h1 className="text-[25px] text-white ">{data.price + " €"}</h1>
-            <p className="text-white flex items-center gap-2">{"Rating:  " + data.rating} <img className="pb-2" src={star} alt="" width="25px" height="10px"/> </p>
+            <p className="text-white flex items-center gap-2">{"Rating:  " + data.rating} <img className="pb-2" src={star} alt="" width="20px" height="10px"/> </p>
           </div>
           
           <div className="buy w-[80%] h-[3rem] flex justify-center items-center mb-1 absolute bottom-2">
