@@ -20,7 +20,7 @@ import DATA from './assets/data/nestech.json'
 function App() {
   const [count, setCount] = useState(0)
 
-  console.log(DATA.produits[0].image);
+  // console.log(DATA.produits[0].image);
 
   return (
     <div className="">
