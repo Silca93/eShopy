@@ -26,7 +26,7 @@ export default function InfoBanner() {
 
                             <div className="right h-full w-3/4  flex items-center ">
 
-                                <p className=' text-[1.3rem] ml-4'>Free Shipping and Returns</p>
+                                <p className=' text-[1.3rem] ml-4 max-[1000px]:text-[15px] max-[768px]:text-[12px]'>Free Shipping and Returns</p>
 
                             </div>
                         </div>
@@ -45,7 +45,7 @@ export default function InfoBanner() {
 
                             <div className="right h-full w-3/4  flex items-center">
 
-                                <p className=' text-[1.3rem]'>100% Money Back Guaranteed</p>
+                                <p className=' text-[1.3rem] max-[1000px]:text-[15px] max-[768px]:text-[12px]'>100% Money Back Guaranteed</p>
 
 
                             </div>
@@ -65,7 +65,7 @@ export default function InfoBanner() {
 
                             <div className="right h-full w-3/4 flex items-center">
 
-                                <p className=' text-[1.3rem]'>High Quality Items</p>
+                                <p className=' text-[1.3rem] max-[1000px]:text-[15px] max-[768px]:text-[12px]'>High Quality Items</p>
 
 
                             </div>
@@ -85,7 +85,7 @@ export default function InfoBanner() {
 
                             <div className="right h-full w-3/4 flex items-center ">
 
-                                <p className=' text-[1.3rem]'>Safe and Secure Checkout</p>
+                                <p className=' text-[1.3rem] max-[1000px]:text-[15px] max-[768px]:text-[12px]'>Safe and Secure Checkout</p>
 
 
                             </div>

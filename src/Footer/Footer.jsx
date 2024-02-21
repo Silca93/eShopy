@@ -19,13 +19,13 @@ import "../Footer/Footer.css"
 
 export default function Footer() {
   return (
-    <div className="footer_ w-full h-[17rem]  flex justify-center mb-[2rem] text-white">
+    <div className="footer_ w-full h-[17rem]  flex justify-center mb-[2rem] text-white max-[820px]:h-[20rem] max-[725px]:h-[24rem] max-[600px]:h-[100rem]" >
 
       <div className="footer_box w-[98%] h-full flex justify-center items-end bg-[rgb(59,59,59)] rounded-[2.2rem] ">
 
         <div className="footer_box_inside w-[94%] h-[80%]  flex flex-row">
 
-          <ul className='h-full w-full flex '>
+          <ul className='h-full w-full flex max-[600px]:flex-col max-[600px]:items-center'>
             
             <li className="little_box h-full w-1/6 flex justify-start  
             max-[425px]:w-full max-[425px]:h-1/2 max-[425px]:bg-slate-400">
@@ -34,7 +34,7 @@ export default function Footer() {
 
                 <div className="title_box w-full h-[25%] ">
                     <span className='text-[1.3rem] 
-                    max-[425px]:text-[1rem] 
+                    max-[1100px]:text-[0.9rem] max-[425px]:text-[1rem] 
                     max-[425px]:  '>Who are we?</span>
                 </div>
 
@@ -44,21 +44,21 @@ export default function Footer() {
                     max-[425px]:text-[1rem] max-[425px]:flex max-[425px]:flex-col
                     max-[425px]:h-full max-[425px]: max-[425px]:bg-green-400 max-[425px]:w-[100%]'>
 
-                      <li className='max-[425px]:bg-red-700 max-[425px]:w-full max-[425px]:h-1/2'>
+                      <li className='max-[425px]:bg-red-700  max-[425px]:w-full max-[425px]:h-1/2'>
 
-                        <a href="#" className="text-[1.2rem]  ">Who are we?</a>
+                        <a href="#" className="text-[1.2rem] max-[1100px]:text-[0.9rem]   ">Who are we?</a>
 
                         </li>
 
                       <li className='max-[425px]:bg-red-400'>
 
-                        <a href="#" className="text-[1.2rem]">Our Services</a>
+                        <a href="#" className="text-[1.2rem] max-[1100px]:text-[0.9rem] ">Our Services</a>
 
                         </li>
 
                       <li>
 
-                        <a href="#" className="text-[1.2rem]">Contact Us</a>
+                        <a href="#" className="text-[1.2rem] max-[1100px]:text-[0.9rem] ">Contact Us</a>
 
                         </li>
 
@@ -76,26 +76,26 @@ export default function Footer() {
               <div className="box_li h-full w-[70%] flex flex-col ">
 
                 <div className="title_box w-full h-[25%] ">
-                    <span className='text-[1.3rem]'>Have a Question ?</span>
+                    <span className='text-[1.3rem] max-[1100px]:text-[0.9rem] '>Have a Question ?</span>
                 </div>
 
                 <div className="text_box w-full h-[75%] ">
                     <ul className='leading-[2.4rem]'>
                       <li>
 
-                        <a href="#" className="text-[1.2rem]">Help Section / FAQ</a>
+                        <a href="#" className="text-[1.2rem] max-[1100px]:text-[0.9rem] ">Help Section / FAQ</a>
 
                         </li>
 
                       <li>
 
-                        <a href="#" className="text-[1.2rem]">Payement, Deliveries</a>
+                        <a href="#" className="text-[1.2rem] max-[1100px]:text-[0.9rem] ">Payement, Deliveries</a>
 
                         </li>
 
                       <li>
 
-                        <a href="#" className="text-[1.2rem]">CS, Request a Return</a>
+                        <a href="#" className="text-[1.2rem] max-[1100px]:text-[0.9rem] ">CS, Request a Return</a>
 
                         </li>
 
@@ -116,26 +116,26 @@ export default function Footer() {
               <div className="box_li h-full w-[80%] flex flex-col  ">
 
                 <div className="title_box w-full h-[25%] ">
-                    <span className='text-[1.3rem]'>Informations</span>
+                    <span className='text-[1.3rem] max-[1100px]:text-[0.9rem] '>Informations</span>
                 </div>
 
                 <div className="text_box w-full h-[75%] ">
                     <ul className='leading-[2.4rem]'>
                       <li>
 
-                        <a href="#" className="text-[1.2rem]">Site Map</a>
+                        <a href="#" className="text-[1.2rem] max-[1100px]:text-[0.9rem] ">Site Map</a>
 
                         </li>
 
                       <li>
 
-                        <a href="#" className="text-[1.2rem]">General Terms and Conditions</a>
+                        <a href="#" className="text-[1.2rem] max-[1100px]:text-[0.9rem] ">General Terms and Conditions</a>
 
                         </li>
 
                       <li>
 
-                        <a href="#" className="text-[1.2rem]">Manage Your Cookies</a>
+                        <a href="#" className="text-[1.2rem] max-[1100px]:text-[0.9rem] ">Manage Your Cookies</a>
 
                         </li>
 
@@ -155,7 +155,7 @@ export default function Footer() {
               <div className="box_li h-full w-[70%] flex flex-col ">
 
                 <div className="title_box w-full h-[25%] ">
-                    <span className='text-[1.3rem]'>Social Media</span>
+                    <span className='text-[1.3rem] max-[1100px]:text-[0.9rem] '>Social Media</span>
                 </div>
 
                 <div className="text_box w-full h-[75%]  flex flex-col">
@@ -168,7 +168,7 @@ export default function Footer() {
                           <li className='w-[40%]  h-[85%]'>
 
                             <a href="#">
-                              <img src={INSTA} className='w-[60%]' alt="" srcset="" />
+                              <img src={INSTA} className='w-[60%] max-[1100px]:w-[40%] ' alt="" srcset="" />
                             </a>
 
                           </li>
@@ -176,7 +176,7 @@ export default function Footer() {
                           <li className='w-[40%]  h-[84%]'>
 
                             <a href="#">
-                              <img src={TWI} className='w-[60%]' alt="" srcset="" />
+                              <img src={TWI} className='w-[60%] max-[1100px]:w-[40%]' alt="" srcset="" />
                             </a>
 
                           </li>
@@ -190,7 +190,7 @@ export default function Footer() {
                         <li className='w-[40%]  h-[85%] flex justify-between items-end'>
 
                             <a href="#">
-                              <img src={FB} className='w-[60%]' alt="" srcset="" />
+                              <img src={FB} className='w-[60%] max-[1100px]:w-[40%]' alt="" srcset="" />
                             </a>
 
                         </li>
@@ -198,7 +198,7 @@ export default function Footer() {
                         <li className='w-[40%]  h-[84%] flex justify-between items-end'>
 
                           <a href="#">
-                            <img src={TIC} className='w-[60%]' alt="" srcset="" />
+                            <img src={TIC} className='w-[60%] max-[1100px]:w-[40%]' alt="" srcset="" />
                           </a>
 
                         </li>
@@ -225,7 +225,7 @@ export default function Footer() {
               <div className="box_li h-full w-[85%] flex flex-col  ">
 
                 <div className="title_box w-full h-[25%] ">
-                    <span className='text-[1.3rem]'>Accepted Payment Methods</span>
+                    <span className='text-[1.3rem] max-[1100px]:text-[0.9rem]'>Accepted Payment Methods</span>
                 </div>
 
                 <div className="text_box w-full h-[75%] ">
@@ -235,7 +235,7 @@ export default function Footer() {
                           <li className='flex-auto  h-[85%]' >
 
                             <a href="#">
-                                <img src={VISA} className='w-[80%]' alt="" srcset="" />
+                                <img src={VISA} className='w-[80%] max-[1100px]:w-[60%]' alt="" srcset="" />
                             </a>
 
                           </li>
@@ -243,7 +243,7 @@ export default function Footer() {
                           <li className='flex-auto  h-[85%] ' >
 
                             <a href="#">
-                              <img src={MCARD} className='w-[80%]' alt="" srcset="" />
+                              <img src={MCARD} className='w-[80%] max-[1100px]:w-[60%]' alt="" srcset="" />
                             </a>
 
                           </li>
@@ -251,7 +251,7 @@ export default function Footer() {
                           <li className='flex-auto  h-[85%] flex flex-col justify-start' >
 
                             <a href="#">
-                            <img src={APPLEPAY} className='w-[80%]' alt="" srcset="" />
+                            <img src={APPLEPAY} className='w-[80%] max-[1100px]:w-[60%]' alt="" srcset="" />
 
                             </a>
 
@@ -266,7 +266,7 @@ export default function Footer() {
                       <li className=' w-[30%]  h-[85%]' >
 
                           <a href="#">
-                              <img src={BANKTRANSFERT} className='w-[80%]' alt="" srcset="" />
+                              <img src={BANKTRANSFERT} className='w-[80%] max-[1100px]:w-[60%]' alt="" srcset="" />
                           </a>
                             
                           </li>
@@ -274,7 +274,7 @@ export default function Footer() {
                           <li className=' w-[30%]  h-[85%] ' >
                             
                           <a href="#">
-                            <img src={PAYPAL} className='w-[80%] h-[74%]' alt="" srcset="" />
+                            <img src={PAYPAL} className='w-[80%] h-[74%] max-[1100px]:w-[60%] max-[1100px]:h-[25%]'  alt="" srcset="" />
                           </a>
                             
                           </li>
@@ -298,7 +298,7 @@ export default function Footer() {
               <div className="box_li h-full w-[78%] flex flex-col ">
 
                 <div className="title_box w-full h-[25%] ">
-                    <span className='text-[1.3rem]'>Our Transporters</span>
+                    <span className='text-[1.3rem] max-[1100px]:text-[0.9rem] '>Our Transporters</span>
                 </div>
 
                 <div className="text_box w-full h-[75%] ">
