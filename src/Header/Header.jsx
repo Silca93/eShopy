@@ -48,7 +48,7 @@ export default function Header({logo, chercher, shop, coeur, money, budget, coun
             </div>    
             </div>
             <div className="mid h-full w-1/3 bg-[#3B3B3B] flex justify-center items-center max-[600px]:w-1/4 ">
-                <img className="max-[600px]:w-full " src={logo} alt="" width="300px" height="100%" />
+                <img className="nestech max-[600px]:w-full " src={logo} alt="" width="300px" height="100%" />
             </div>
             <div className="right h-full w-1/3 flex justify-end gap-6 items-center pr-5 max-[900px]:gap-2 max-[500px]:w-1/2">
                 <div className="h-[55%] w-[130px] bg-black rounded-3xl flex justify-center items-center gap-4 overflow-hidden max-[1085px]:w-[200px] max-[890px]:w-[300px] max-[890px]:h-[75%] max-[890px]:gap-1 max-[890px]:flex-col max-[890px]:bg-[#3B3B3B]">
