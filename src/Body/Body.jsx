@@ -43,10 +43,14 @@ export default function Body({data, star, logo, fond, chercher, shop, coeur, mon
     tab.map((element) =>{
       console.log(element); 
       cpt_element = countItem(element, tab)
-      console.log( element + " has " + cpt_element);
       
       tab2.map((element2) =>{
-        element2.qty = cpt_element;
+        if (element == element2.name) {
+          element2.qty = cpt_element;
+
+          console.log( element + " has " + element2.qty);
+          // console.log("hello");
+        }
       })
       
     })
