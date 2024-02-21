@@ -9,11 +9,35 @@ body {
   
 }
 
+/* @keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+    border-color: transparent;
+  }
+  100% {
+    transform: rotate(360deg);
+    border-color: rgb(255, 255, 255);
+  }
+} */
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 3px 2px blue; /* Initial glow effect */
+  }
+  50% {
+    box-shadow: 0 0 5px 5px blue; /* Increased glow effect */
+  }
+  100% {
+    box-shadow: 0 0 2px 2px blue; /* Back to initial glow effect */
+  }
+}
+
 .bannerDiv {
   background-image: url(./assets/images/conception-bureau-futuriste.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 0px -170px;
+  
 }
 
 /* === removing default button style ===*/
@@ -59,4 +83,13 @@ body {
 .techNest:hover .hover-text {
   width: 100%;
   filter: drop-shadow(0 0 23px var(--animation-color))
+}
+
+.nestech {
+  transform: scale(1);
+  transition: transform 0.4s ease-in-out;
+}
+
+.nestech:hover {
+  transform: scale(1.1);
 }
