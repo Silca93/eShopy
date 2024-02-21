@@ -13,3 +13,40 @@
 
     border-top: 2px solid white;
 }
+
+/********** responsive start **********/
+
+@media (width >= 375px) and (width <= 425px){
+
+    .footer_ {
+        /* background-color: red; */
+        flex-direction: column;
+        height: 40rem !important;
+        flex-direction: column;
+
+        
+    }
+    .footer_ .footer_box {
+        background-color: green;
+        flex-direction: column;
+        /* height: fit-content; */
+    }
+    .footer_ .footer_box .footer_box_inside {
+        background-color: blue;
+        /* flex-direction: column; */
+        /* height: fit-content; */
+    }
+    .footer_ .footer_box .footer_box_inside ul {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr) !important;
+        grid-template-rows: repeat(2, 1fr) !important ;
+        /* background-color: yellow; */
+        /* flex-direction: column; */
+        /* flex-direction: column; */
+        /* height: fit-content; */
+    }
+}
+
+/********** responsive end **********/
+
+

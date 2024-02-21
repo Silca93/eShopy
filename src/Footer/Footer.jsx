@@ -21,37 +21,44 @@ export default function Footer() {
   return (
     <div className="footer_ w-full h-[17rem]  flex justify-center mb-[7rem] text-white">
 
-      <div className="footer_box w-[98%] h-full flex justify-center items-end bg-[rgb(59,59,59)] rounded-[15px]">
+      <div className="footer_box w-[98%] h-full flex justify-center items-end bg-[rgb(59,59,59)] rounded-[15px] ">
 
         <div className="footer_box_inside w-[94%] h-[80%]  flex flex-row">
 
           <ul className='h-full w-full flex '>
             
-            <li className="little_box h-full w-1/6 flex justify-start ">
+            <li className="little_box h-full w-1/6 flex justify-start  
+            max-[425px]:w-full max-[425px]:h-1/2 max-[425px]:bg-slate-400">
 
               <div className="box_li h-full w-[70%] flex flex-col ">
 
                 <div className="title_box w-full h-[25%] ">
-                    <span className='text-[1.3rem]  '>Qui sommes-nous ?</span>
+                    <span className='text-[1.3rem] 
+                    max-[425px]:text-[1rem] 
+                    max-[425px]:  '>Who are we?</span>
                 </div>
 
-                <div className="text_box w-full h-[75%] ">
-                    <ul className='leading-[2.4rem]'>
-                      <li>
+                <div className="text_box w-full h-[75%] 
+                max-[425px]:flex-col ">
+                    <ul className='leading-[2.4rem] 
+                    max-[425px]:text-[1rem] max-[425px]:flex max-[425px]:flex-col
+                    max-[425px]:h-full max-[425px]: max-[425px]:bg-green-400 max-[425px]:w-[100%]'>
 
-                        <a href="#" className="text-[1.2rem]">Qui sommes-nous ?</a>
+                      <li className='max-[425px]:bg-red-700 max-[425px]:w-full max-[425px]:h-1/2'>
+
+                        <a href="#" className="text-[1.2rem]  ">Who are we?</a>
+
+                        </li>
+
+                      <li className='max-[425px]:bg-red-400'>
+
+                        <a href="#" className="text-[1.2rem]">Our Services</a>
 
                         </li>
 
                       <li>
 
-                        <a href="#" className="text-[1.2rem]">Nos services</a>
-
-                        </li>
-
-                      <li>
-
-                        <a href="#" className="text-[1.2rem]">Contactez-nous</a>
+                        <a href="#" className="text-[1.2rem]">Contact Us</a>
 
                         </li>
 
@@ -63,31 +70,32 @@ export default function Footer() {
             </li>
 
             
-            <li className="little_box h-full w-1/6  flex justify-start ">
+            <li className="little_box h-full w-1/6  flex justify-start 
+            max-[425px]:w-full max-[425px]:bg-amber-800 ">
 
               <div className="box_li h-full w-[70%] flex flex-col ">
 
                 <div className="title_box w-full h-[25%] ">
-                    <span className='text-[1.3rem]'>Une question ?</span>
+                    <span className='text-[1.3rem]'>Have a Question ?</span>
                 </div>
 
                 <div className="text_box w-full h-[75%] ">
                     <ul className='leading-[2.4rem]'>
                       <li>
 
-                        <a href="#" className="text-[1.2rem]">Rubrique d'aide / FAQ</a>
+                        <a href="#" className="text-[1.2rem]">Help Section / FAQ</a>
 
                         </li>
 
                       <li>
 
-                        <a href="#" className="text-[1.2rem]">Paiement, livraisons</a>
+                        <a href="#" className="text-[1.2rem]">Payement, Deliveries</a>
 
                         </li>
 
                       <li>
 
-                        <a href="#" className="text-[1.2rem]">SAV, demande un retour</a>
+                        <a href="#" className="text-[1.2rem]">CS, Request a Return</a>
 
                         </li>
 
@@ -102,7 +110,8 @@ export default function Footer() {
             {/* Informations part start*/}
 
             
-            <li className="little_box h-full w-1/6  flex justify-start  ">
+            <li className="little_box h-full w-1/6  flex justify-start 
+            max-[425px]:w-full max-[425px]:bg-black ">
 
               <div className="box_li h-full w-[80%] flex flex-col  ">
 
@@ -114,19 +123,19 @@ export default function Footer() {
                     <ul className='leading-[2.4rem]'>
                       <li>
 
-                        <a href="#" className="text-[1.2rem]">Plan du site</a>
+                        <a href="#" className="text-[1.2rem]">Site Map</a>
 
                         </li>
 
                       <li>
 
-                        <a href="#" className="text-[1.2rem]">Conditions générales de vente</a>
+                        <a href="#" className="text-[1.2rem]">General Terms and Conditions</a>
 
                         </li>
 
                       <li>
 
-                        <a href="#" className="text-[1.2rem]">Gérer vos cookies</a>
+                        <a href="#" className="text-[1.2rem]">Manage Your Cookies</a>
 
                         </li>
 
@@ -141,12 +150,12 @@ export default function Footer() {
             {/* Informations part end*/}
 
             {/* reseau sociaux part start */}
-            <li className="little_box h-full w-1/6  flex justify-start ">
+            <li className="little_box h-full w-1/6  flex justify-start max-[425px]:w-1/3 max-[425px]:bg-black">
 
               <div className="box_li h-full w-[70%] flex flex-col ">
 
                 <div className="title_box w-full h-[25%] ">
-                    <span className='text-[1.3rem]'>Réseaux sociaux</span>
+                    <span className='text-[1.3rem]'>Social Media</span>
                 </div>
 
                 <div className="text_box w-full h-[75%]  flex flex-col">
@@ -210,12 +219,13 @@ export default function Footer() {
 
             {/* moyen de paiement part start*/}
 
-            <li className="little_box h-full w-1/6  flex justify-start  ">
+            <li className="little_box h-full w-1/6  flex justify-start 
+            max-[425px]:w-1/3 max-[425px]:bg-black ">
 
               <div className="box_li h-full w-[85%] flex flex-col  ">
 
                 <div className="title_box w-full h-[25%] ">
-                    <span className='text-[1.3rem]'>Moyen de paiement acceptés</span>
+                    <span className='text-[1.3rem]'>Accepted Payment Methods</span>
                 </div>
 
                 <div className="text_box w-full h-[75%] ">
@@ -283,12 +293,12 @@ export default function Footer() {
 
             {/* Nos transporteurs part start*/}
 
-            <li className="little_box h-full w-1/6  flex justify-end ">
+            <li className="little_box h-full w-1/6  flex justify-end max-[425px]:w-1/3 max-[425px]:bg-black">
 
               <div className="box_li h-full w-[78%] flex flex-col ">
 
                 <div className="title_box w-full h-[25%] ">
-                    <span className='text-[1.3rem]'>Nos transporteurs</span>
+                    <span className='text-[1.3rem]'>Our Transporters</span>
                 </div>
 
                 <div className="text_box w-full h-[75%] ">

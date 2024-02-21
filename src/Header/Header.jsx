@@ -1,5 +1,5 @@
 import React from 'react'
-
+import "../Header/Header.css"
 export default function Header({logo, chercher, shop, coeur, money, budget}) {
   return (
     <div className="w-full h-[10rem] flex flex-col justify-center items-center gap-3 px-3">
@@ -29,7 +29,8 @@ export default function Header({logo, chercher, shop, coeur, money, budget}) {
                     <img src={coeur} className="" width="25px" height="25px" alt="" />
                 </div>
                 <div className="right">
-                <img src={shop} width="25px" height="25px" alt="" />
+                <img src={shop} width="25px" height="25px" alt="" id='shop_bag'/>
+                <span className="circle_bag">{0}</span>
                 </div>
             </div>
         </div>
