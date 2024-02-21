@@ -1,5 +1,5 @@
 import React from 'react'
-
+import "../Header/Header.css"
 export default function Header({logo, chercher, shop, coeur, money, budget, count}) {
   return (
     <div className="w-full h-[10rem] flex flex-col justify-center items-center gap-3 px-3">
