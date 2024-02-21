@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 
 export default function Card({data, star, key, add, coeur, substract}) {
 
-  // console.log(data.quantity);
+  // console.log(data.id);
 
   const [quantity, setQuantity] = useState(data.quantity);
   let decrementQty = () =>{
@@ -25,7 +25,7 @@ export default function Card({data, star, key, add, coeur, substract}) {
     // };
   }, [quantity]);
   return (
-    <div className="card w-[400px] h-[600px] bg-white-500 mx-5 mt-5">
+    <div id={data.id} className="card w-[400px] h-[600px] bg-white-500 mx-5 mt-5">
       <div className="top w-full h-[10%] bg-[#403D39] flex justify-end items-center rounded-t-lg pr-5">
         <span className='text-white text-[2rem] mr-5'>{quantity}</span>
         <img src={coeur} alt="" width="25px" height="25px"/>

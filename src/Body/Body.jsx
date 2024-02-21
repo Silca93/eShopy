@@ -12,6 +12,7 @@ export default function Body({data, star, logo, fond, chercher, shop, coeur, mon
   
   // })
   
+  
 
 
   return (
