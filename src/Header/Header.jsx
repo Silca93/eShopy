@@ -30,7 +30,7 @@ export default function Header({logo, chercher, shop, coeur, money, budget, coun
                 </div>
                 <div className="right">
                 <img src={shop} width="25px" height="25px" alt="" id='shop_bag'/>
-                <span className="circle_bag">{0}</span>
+                <span className="circle_bag">{count}</span>
                 </div>
             </div>
         </div>
