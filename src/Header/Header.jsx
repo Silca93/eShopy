@@ -5,15 +5,14 @@ import SideBar from '../SideBar/SideBar'
 export default function Header({logo, chercher, shop, coeur, money, budget, count, add}) {
 
     const [topNavbar, setTopNavbar] = useState(null);
-    // useEffect(() => {
+    
 
-    const [sideBar, setSideBar] = useState("none");
+    const [toggleSB,setToggleSB] = useState(false);
 
-
-    let displaySideBar = () =>{
-
-        document.getElementsByClassName("side_bar")
+    let handleToggle =() =>{
+        setToggleSB(!toggleSB);
     }
+
     //? props.setmonpannier([...props.monpannier, props.marque])
         
 
@@ -45,20 +44,15 @@ export default function Header({logo, chercher, shop, coeur, money, budget, coun
                 <div className="mid">
                     <img src={coeur} className="" width="25px" height="25px" alt="" />
                 </div>
-                <div className="right" onClick={()=>{displaySideBar()}}>
+                <div className="right" onClick={()=>{handleToggle()}}>
                 <img src={shop} width="25px" height="25px" alt="" id='shop_bag'/>
                 <span className="circle_bag">{count}</span>
                 </div>
             </div>
         </div>
-        <div className="side_bar h-[20rem] w-[15rem] bg-[rgba(217,217,217,0.8)] absolute top-[5.5rem] right-[2.2rem] rounded-[20px] text-center flex flex-col  items-center" >
-            <h2 className='text-[2rem] mt-2 absolute top-0'> ITEMS :</h2>
+        {/* side bar place */}
 
-            <div className={`itemsList w-[90%] absolute top-[4rem] bg-black `}>
-                test
-
-            </div>
-        </div>
+        { toggleSB ? <SideBar /> : ""}
     </div> 
   )
 }
