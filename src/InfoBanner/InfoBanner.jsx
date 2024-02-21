@@ -6,7 +6,7 @@ import DELIVERY from "../assets/images/livraison-rapide.png"
 
 export default function InfoBanner() {
   return (
-    <div className='info_banner w-full h-[8rem]  flex justify-center mb-[4rem]'>
+    <div className='info_banner w-full h-[8rem]  flex justify-center mb-[2rem] mt-6'>
 
         <div className="info_banner_box w-[98%] h-full flex justify-center items-center bg-[rgb(217,217,217)] rounded-[1.5rem]">
 

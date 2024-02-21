@@ -2,8 +2,9 @@ import React from 'react'
 import { useEffect, useState } from 'react'
 import "../Header/Header.css"
 import SideBar from '../SideBar/SideBar'
-export default function Header({logo, chercher, shop, coeur, money, budget, count, add}) {
-
+import Bag from '../Bag/Bag'
+export default function Header({logo, chercher, shop, coeur, money, budget, count, add, data}) {
+    // console.log(data);
     const [topNavbar, setTopNavbar] = useState(null);
     
 
@@ -14,7 +15,7 @@ export default function Header({logo, chercher, shop, coeur, money, budget, coun
     }
 
     //? props.setmonpannier([...props.monpannier, props.marque])
-        
+
 
     // }, [topNavbar]);
   return (
@@ -44,15 +45,20 @@ export default function Header({logo, chercher, shop, coeur, money, budget, coun
                 <div className="mid">
                     <img src={coeur} className="" width="25px" height="25px" alt="" />
                 </div>
-                <div className="right" onClick={()=>{handleToggle()}}>
-                <img src={shop} width="25px" height="25px" alt="" id='shop_bag'/>
+                <div className="right cursor-pointer" onClick={()=>{handleToggle()}} >
+
+                    {/* bag component place */}
+
+                    <Bag shop={shop} items={count} />
+                {/* <img src={shop} width="25px" height="25px" alt="" id='shop_bag'/> */}
+
                 <span className="circle_bag">{count}</span>
                 </div>
             </div>
         </div>
         {/* side bar place */}
 
-        { toggleSB ? <SideBar /> : ""}
+        { toggleSB ? <SideBar data={data} items={count} /> : ""}
     </div> 
   )
 }

@@ -19,9 +19,9 @@ import "../Footer/Footer.css"
 
 export default function Footer() {
   return (
-    <div className="footer_ w-full h-[17rem]  flex justify-center mb-[7rem] text-white">
+    <div className="footer_ w-full h-[17rem]  flex justify-center mb-[2rem] text-white">
 
-      <div className="footer_box w-[98%] h-full flex justify-center items-end bg-[rgb(59,59,59)] rounded-[15px] ">
+      <div className="footer_box w-[98%] h-full flex justify-center items-end bg-[rgb(59,59,59)] rounded-[2.2rem] ">
 
         <div className="footer_box_inside w-[94%] h-[80%]  flex flex-row">
 
