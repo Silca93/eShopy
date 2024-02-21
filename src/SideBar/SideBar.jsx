@@ -5,7 +5,7 @@ import SideBarItem from '../SideBarItem/SideBarItem'
 export default function SideBar({data, items}) {
   return (
 
-  <div className="side_bar h-[20rem] w-[15rem] bg-[rgba(217,217,217,0.8)] absolute top-[5.5rem] right-[2.2rem] rounded-[20px] text-center flex flex-col  items-center overflow-hidden" >
+  <div className="side_bar h-[20rem] w-[15rem] bg-[rgba(217,217,217,1)] fixed z-50 top-[6.5rem] right-[1rem] rounded-[20px] text-center flex flex-col  items-center overflow-hidden" >
 
     <h2 className='text-[2rem] mt-0 absolute top-0 bg-black text-white w-full '> ITEMS :</h2>
 

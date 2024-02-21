@@ -1,8 +1,8 @@
 import React from 'react'
 import { useEffect, useState } from 'react';
 
-export default function Card({data, star, key, add, coeur, substract, display_item,display_current_card }) {
-  console.log(display_current_card);
+export default function Card({data, star, key, add, coeur, substract, display_item, addToBag }) {
+  // console.log(addToBag);
 
   // console.log(data.id);
 
@@ -25,9 +25,9 @@ export default function Card({data, star, key, add, coeur, substract, display_it
 
   }, [quantity]);
 
-  // let display_current_card = () =>{
-  //   console.log(data.id);
-  // } ;
+  let display_current_card = () =>{
+    console.log(data.id);
+  } ;
   return (
     <div id={data.id} className="card w-[400px] h-[600px] bg-white-500 mx-5 mt-5">
       <div className="top w-full h-[10%] bg-[#403D39] flex justify-end items-center rounded-t-lg pr-5">
@@ -48,7 +48,7 @@ export default function Card({data, star, key, add, coeur, substract, display_it
           </div>
           
           <div className="buy w-[80%] h-[2.5rem] flex justify-center items-center mb-1 absolute bottom-2">
-            <button onClick={() => {add(data.price), substract(data.price), decrementQty(),display_current_card() }} className="hover:bg-white hover:border-black hover:text-black border-solid border-2 w-5/6 h-full rounded-md ml-[60px] bg-black text-white" id='addCart'> {quantity > 1 ? "ADD TO CART" : "ONLY ONE LEFT"}</button>
+            <button onClick={() => {add(data.price), substract(data.price), decrementQty(),display_current_card(), addToBag(data.id) }} className="hover:bg-white hover:border-black hover:text-black border-solid border-2 w-5/6 h-full rounded-md ml-[60px] bg-black text-white" id='addCart'> {quantity > 1 ? "ADD TO CART" : "ONLY ONE LEFT"}</button>
           </div>
         </div>
         
