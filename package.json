@@ -2,7 +2,7 @@
   "name": "projet-eshopy",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://{username}.github.io/{repo-name}/",
+  "homepage": "https://Silca93.github.io/eShoppy/",
   "type": "module",
   "scripts": {
     "dev": "vite",

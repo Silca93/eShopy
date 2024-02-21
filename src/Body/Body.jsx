@@ -16,8 +16,8 @@ export default function Body({data, star, logo, fond, chercher, shop, coeur, mon
   let display_item = (e) =>{
     console.log(e.current.target);
 }
-let display_current_card = () =>{
-  console.log(data.id);
+let display_current_card = (e) =>{
+  console.log(e.data.id);
 } ;
   
 
