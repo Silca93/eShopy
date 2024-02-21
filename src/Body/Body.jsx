@@ -12,7 +12,7 @@ export default function Body({data, star, logo, fond, chercher, shop, coeur, mon
   return (
     <div className="body bg-[#222222] w-screen overflow-x-hidden flex flex-col gap-[1rem]">
       
-        <Header logo={logo} chercher={chercher} shop={shop} coeur={coeur} money={money} budget={budget} count={count}/>
+        <Header logo={logo} chercher={chercher} shop={shop} coeur={coeur} money={money} budget={budget} count={count} add={add}/>
 
         <div className="techNest text-white text-[40px] flex justify-center items-center">
         <h1><span class="actual-text">&nbsp;&nbsp;</span>

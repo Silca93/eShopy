@@ -30,7 +30,7 @@ function App() {
     console.log(budget);
   }
 
-  let incrementCart = (price) => {
+  let incrementCart = () => {
     setCount((prevValue) => prevValue + 1)
     console.log(count);
     
