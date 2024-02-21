@@ -1,6 +1,6 @@
 import React from 'react'
-import "../Header/Header.css"
-export default function Header({logo, chercher, shop, coeur, money, budget}) {
+
+export default function Header({logo, chercher, shop, coeur, money, budget, count}) {
   return (
     <div className="w-full h-[10rem] flex flex-col justify-center items-center gap-3 px-3">
         <div className="group w-[98%] h-[50%] bg-[#3B3B3B] rounded-2xl flex sticky z-30  hover:outline hover:outline-white ">
