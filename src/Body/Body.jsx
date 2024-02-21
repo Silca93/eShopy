@@ -5,23 +5,23 @@ import Banner from '../Banner/Banner'
 import Footer from '../Footer/Footer';
 import InfoBanner from '../InfoBanner/InfoBanner';
 
-export default function Body({data, star, logo, fond, chercher, shop, coeur, money, budget, add, substract}) {
+export default function Body({data, star, logo, fond, chercher, shop, coeur, money, budget, add, substract, count}) {
   console.log(data);
 
 
   return (
-    <div className="body bg-[#222222] w-screen overflow-x-hidden flex flex-col gap-[1rem] ">
+    <div className="body bg-[#222222] w-screen overflow-x-hidden flex flex-col gap-[1rem]">
       
-        <Header logo={logo} chercher={chercher} shop={shop} coeur={coeur} money={money} budget={budget}/>
+        <Header logo={logo} chercher={chercher} shop={shop} coeur={coeur} money={money} budget={budget} count={count}/>
 
         <div className="techNest text-white text-[40px] flex justify-center items-center">
         <h1><span class="actual-text">&nbsp;&nbsp;</span>
-        <span aria-hidden="true" class="hover-text">&nbsp;ELEVATE YOUR TECH SPACE&nbsp;</span></h1>
+        <span aria-hidden="true" className="hover-text max-[768px]:text-[25px]">&nbsp;ELEVATE YOUR TECH SPACE&nbsp;</span></h1>
         </div>
 
         <Banner fond={fond}/>
         <div className="text-white text-[30px] flex justify-center items-center">
-        <h1>Building Your Tech Nest, One Accessory at a Time</h1>
+        <h1 className="flex flex-wrap px-5 text-center">Building Your Tech Nest, One Accessory at a Time</h1>
         </div>
 
         <div className="cardsDiv w-full h-[120rem] flex overflow-x-hidden justify-center max-[883px]:bg-[#222222] max-[883px]:items-center max-[500px]:h[100%] max-[500px]:bg-[#222222] gap-4 flex-wrap mt-3">

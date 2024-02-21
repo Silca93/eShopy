@@ -38,7 +38,7 @@ function App() {
 
   return (
     <div className="bg-[#222222]">
-      <Body data={DATA} star={star} logo={logo} fond={bannerImg} chercher={chercher} shop={shopCart} coeur={coeur} money={money} budget={budget} add={incrementCart} substract={decrementBudget}/>
+      <Body data={DATA} star={star} logo={logo} fond={bannerImg} chercher={chercher} shop={shopCart} coeur={coeur} money={money} budget={budget} add={incrementCart} substract={decrementBudget} count={count}/>
     </div>
   )
 }
