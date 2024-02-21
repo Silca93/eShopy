@@ -4,11 +4,11 @@ import "../Header/Header.css"
 export default function Header({logo, chercher, shop, coeur, money, budget, count, add}) {
 
     const [topNavbar, setTopNavbar] = useState(null)
-    useEffect(() => {
+    // useEffect(() => {
         
         
 
-    }, [topNavbar]);
+    // }, [topNavbar]);
   return (
     <div className="w-full h-[10rem] flex flex-col justify-center items-center gap-3 px-3">
         <div className={`group w-[98%] h-[10%] bg-[#3B3B3B] rounded-2xl flex fixed top-0 z-30 ${topNavbar}`}>

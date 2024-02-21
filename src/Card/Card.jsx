@@ -7,10 +7,11 @@ export default function Card({data, star, key, add, coeur, substract}) {
 
   const [quantity, setQuantity] = useState(data.quantity);
   let decrementQty = () =>{
-    setQuantity( (prevValue) => prevValue -1);
+
+    if (quantity > 0) { setQuantity( (prevValue) => prevValue -1);}
   }
 
-  console.log(document.getElementById("addCart"));
+  // console.log(document.getElementById("addCart"));
 
   useEffect(() => {
 
