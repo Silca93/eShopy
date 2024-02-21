@@ -25,9 +25,13 @@ function App() {
  
 
   const decrementBudget = (price) => {
-    setBudget((prevValue) => Math.round(prevValue * 100)/100 - Math.round(price * 100)/100);
-    // budget = parseFloat(budget.toFixed(2));
-    console.log(budget);
+
+    if (price <= budget) {
+      
+      setBudget((prevValue) => ( ( prevValue - price ).toFixed(2) ) );
+    }
+
+    // console.log(budget);
   }
 
   let incrementCart = () => {

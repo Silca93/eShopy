@@ -1,9 +1,17 @@
 import React from 'react'
+import { useEffect, useState } from 'react'
 import "../Header/Header.css"
 export default function Header({logo, chercher, shop, coeur, money, budget, count, add}) {
+
+    const [topNavbar, setTopNavbar] = useState(null)
+    useEffect(() => {
+        
+        
+
+    }, [topNavbar]);
   return (
     <div className="w-full h-[10rem] flex flex-col justify-center items-center gap-3 px-3">
-        <div className="group w-[98%] h-[50%] bg-[#3B3B3B] rounded-2xl flex sticky z-30  hover:outline hover:outline-white ">
+        <div className={`group w-[98%] h-[10%] bg-[#3B3B3B] rounded-2xl flex fixed top-0 z-30 ${topNavbar}`}>
             <div className="left h-full w-1/3 text-white flex flex-row justify-start items-center gap-[5rem] text-[1.5rem] pl-6 relative">
                 <a className="hover:underline" href="">Home</a>
                 <a className="hover:underline" href="">Products</a>

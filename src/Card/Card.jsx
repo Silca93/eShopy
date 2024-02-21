@@ -1,9 +1,32 @@
 import React from 'react'
+import { useEffect, useState } from 'react';
 
 export default function Card({data, star, key, add, coeur, substract}) {
+
+  // console.log(data.quantity);
+
+  const [quantity, setQuantity] = useState(data.quantity);
+  let decrementQty = () =>{
+    setQuantity( (prevValue) => prevValue -1);
+  }
+
+  console.log(document.getElementById("addCart"));
+
+  useEffect(() => {
+
+
+    if(quantity == 0){
+      // console.log("almost out of stock");
+      // document.querySelector("#addCart").style = 
+      document.getElementById("addCart").style.display = `none`;
+    }
+    // return () => {
+    // };
+  }, [quantity]);
   return (
     <div className="card w-[400px] h-[600px] bg-white-500 mx-5 mt-5">
       <div className="top w-full h-[10%] bg-[#403D39] flex justify-end items-center rounded-t-lg pr-5">
+        <span className='text-white text-[2rem] mr-5'>{quantity}</span>
         <img src={coeur} alt="" width="25px" height="25px"/>
       </div>  
         
@@ -20,7 +43,7 @@ export default function Card({data, star, key, add, coeur, substract}) {
           </div>
           
           <div className="buy w-[80%] h-[2.5rem] flex justify-center items-center mb-1 absolute bottom-2">
-            <button onClick={() => {add(data.price), substract(data.price)}} className="hover:bg-white hover:border-black hover:text-black border-solid border-2 w-5/6 h-full rounded-md ml-[60px] bg-black text-white">ADD TO CART</button>
+            <button onClick={() => {add(data.price), substract(data.price), decrementQty()}} className="hover:bg-white hover:border-black hover:text-black border-solid border-2 w-5/6 h-full rounded-md ml-[60px] bg-black text-white" id='addCart'> {quantity > 1 ? "ADD TO CART" : "ONLY ONE LEFT"}</button>
           </div>
         </div>
         

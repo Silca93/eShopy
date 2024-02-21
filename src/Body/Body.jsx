@@ -6,7 +6,12 @@ import Footer from '../Footer/Footer';
 import InfoBanner from '../InfoBanner/InfoBanner';
 
 export default function Body({data, star, logo, fond, chercher, shop, coeur, money, budget, add, substract, count}) {
-  console.log(data);
+  // data.map((element , index) => {
+  //     console.log(element.quantity);
+
+  
+  // })
+  
 
 
   return (
