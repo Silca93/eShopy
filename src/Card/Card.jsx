@@ -35,12 +35,12 @@ export default function Card({data, star, key, add, coeur, substract, display_it
         <img src={coeur} alt="" width="25px" height="25px"/>
       </div>  
         
-        <div className="mid w-full h-[50%] bg-white flex justify-center">
+        <div className="mid w-full h-[50%] max-[500px]:h-[40%] bg-white flex justify-center ">
           <img src={data.image} alt="" srcset="" />
         </div>
-      <div className="bot w-full h-[45%] bg-[#403D39] rounded-b-lg">
+      <div className="bot w-full h-[45%] max-[500px]:h-[50%] bg-[#403D39] rounded-b-lg">
         <div className="itemInfo w-full h-full flex flex-col justify-start px-4 gap-3">
-          <h1 className="text-[25px] text-white font-[500] pt-1">{data.name}</h1>
+          <h1 className="text-[25px] text-white font-[500] pt-1 ">{data.name}</h1>
           <h1 className="text-[15px] text-white">{data.description}</h1>
           <div className="rating flex justify-between items-center">
             <h1 className="text-[25px] text-white ">{data.price + " €"}</h1>
