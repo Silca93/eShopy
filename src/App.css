@@ -40,6 +40,31 @@ body {
   
 }
 
+@media screen and (max-width:1440px){
+  .bannerDiv {
+    background-position: 0px -100px;
+  }
+  
+}
+@media screen and (max-width:1000px){
+  .bannerDiv {
+    background-position: 0px -50px;
+  }
+  
+}
+@media screen and (max-width:600px){
+  .bannerDiv {
+    background-position: -100px -50px;
+  }
+  
+}
+@media screen and (max-width:500px){
+  .bannerDiv {
+    background-position: -150px -20px;
+  }
+  
+}
+
 /* === removing default button style ===*/
 /* .button {
   margin: 0;
