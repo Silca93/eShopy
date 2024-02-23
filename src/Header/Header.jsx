@@ -2,8 +2,9 @@ import React from 'react'
 import { useEffect, useState, useRef } from 'react'
 import "../Header/Header.css"
 import SideBar from '../SideBar/SideBar'
+
 import Bag from '../Bag/Bag'
-export default function Header({logo, chercher, shop, coeur, money, budget, count, add, data}) {
+export default function Header({logo, chercher, shop, coeur, money, budget, count, add, data, bagItems}) {
     // console.log(data);
     const [topNavbar, setTopNavbar] = useState(null);
     const clickburger = useRef(null)
@@ -29,6 +30,9 @@ export default function Header({logo, chercher, shop, coeur, money, budget, coun
     }
 
     //? props.setmonpannier([...props.monpannier, props.marque])
+    console.log(bagItems);
+
+    //drawer code 
 
 
     // }, [topNavbar]);
@@ -66,7 +70,7 @@ export default function Header({logo, chercher, shop, coeur, money, budget, coun
                 <div className="mid">
                     <img src={coeur} className="" width="25px" height="25px" alt="" />
                 </div>
-                <div className="right cursor-pointer" onClick={()=>{handleToggle()}} >
+                <div className="right cursor-pointer" onClick={()=>{handleToggle(), appearBag()}} >
 
                     {/* bag component place */}
 
@@ -76,10 +80,20 @@ export default function Header({logo, chercher, shop, coeur, money, budget, coun
                 <span className="circle_bag">{count}</span>
                 </div>
             </div>
+
+            
+        </div>
+
+        <div className="">  
+
+
+
+         <SideBar toggleSB={toggleSB} data={data} items={count} bagItems={bagItems}  /> 
         </div>
         {/* side bar place */}
 
-        { toggleSB ? <SideBar data={data} items={count} /> : ""}
     </div> 
   )
 }
+
+
