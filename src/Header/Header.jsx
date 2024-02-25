@@ -34,7 +34,7 @@ export default function Header({logo, chercher, shop, coeur, money, budget, coun
     // }, [topNavbar]);
   return (
     <div className="w-full h-[10rem] flex flex-col justify-center items-center gap-3 px-3 relative mb-[-3rem] mt-[-3rem]">
-        <div className={`group w-[98%] h-[10%] bg-[#3B3B3B] rounded-b-2xl flex fixed top-4 z-30 ${topNavbar}`}>
+        <div className={`group w-[98%] h-[10%] bg-[#3B3B3B] rounded-3xl flex fixed top-2 z-30 ${topNavbar}`}>
             
             <div className="left h-full w-1/3 text-white flex flex-row justify-start items-center gap-[5rem] text-[1.5rem] pl-6 relative max-[600px]:w-1/4">
             <div onClick={() => {handleBurger()}} class="menu-toggle cursor-pointer hidden max-[768px]:block">
