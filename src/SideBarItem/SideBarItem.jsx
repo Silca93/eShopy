@@ -1,10 +1,11 @@
 import React from 'react'
+import DELETE from '../assets/images/del.png'
 
 
-export default function SideBarItem({data, items, qty, name, src}) {
+export default function SideBarItem({data, items, qty, name, src,price}) {
     // console.log(items);
     // console.log(qty);
-    console.log(name);
+    // console.log(name);
     // console.log();
     // console.log(data[0].image);
   return (
@@ -23,16 +24,18 @@ export default function SideBarItem({data, items, qty, name, src}) {
             {/* text content */}
 
             <p className='text-[0.8rem]'>
-                {name + " " + "-" + " "  + "" + "€"}
+                {name + " " + "-" + " "  + "" + price +"€"}
             </p>
 
         </div>
 
-        <div className="right w-[25%]  h-full rounded-r-lg flex justify-center items-center ">
+        <div className="right w-[25%]  h-full rounded-r-lg flex flex-col justify-center items-center bg-red-400">
             
             {/* quantity content */}
 
-            <p className='text-[0.8rem]'>QTY : </p><p className='text-black'> &nbsp; {qty}</p>
+            <p className='text-[0.8rem]'>QTY : <p className='text-black'> &nbsp; {qty}</p> </p>
+
+            <button type="button ">{DELETE}</button>
 
         </div>
       

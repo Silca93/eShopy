@@ -33,7 +33,7 @@ function App() {
 
     // console.log(budget);
   }
-
+  // bag method
   let incrementCart = () => {
     setCount((prevValue) => prevValue + 1)
     console.log(count);

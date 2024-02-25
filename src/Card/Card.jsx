@@ -1,10 +1,21 @@
 import React from 'react'
 import { useEffect, useState } from 'react';
 
-export default function Card({data, star, key, add, coeur, substract, display_item, addToBag }) {
+export default function Card({data, star, key, add, coeur, substract, display_item, addToBag , originalListProduct}) {
   // console.log(addToBag);
 
-  // console.log(data.id);
+  // console.log(data);
+
+  // console.log(originalListProduct);
+  originalListProduct.map((element) =>{
+    // console.log( element.name + "has : " + element.stock + " in the stock " );
+  })
+  const [stockProduct, setStockProduct] = useState(0);
+  // console.log(stockProduct);
+  // let updateStock = (qty) =>{
+  //   setStockProduct(stockProduct  = qty )
+  // }
+  // console.log(stockProduct);
 
   const [quantity, setQuantity] = useState(data.quantity);
   let decrementQty = () =>{
@@ -12,15 +23,23 @@ export default function Card({data, star, key, add, coeur, substract, display_it
     if (quantity > 0) { setQuantity( (prevValue) => prevValue -1);}
   }
 
+  const handleAddToBag = () => {
+    console.log(quantity);
+    if (quantity > 0) {
+      addToBag(data);
+      decrementQty();
+    }
+  };
+
   // console.log(document.getElementById("addCart"));
 
   useEffect(() => {
-
+    // console.log( data.id+ 'has : ' + quantity);
 
     if(quantity == 0){
       // console.log("almost out of stock");
       // document.querySelector("#addCart").style = 
-      document.getElementById("addCart").style.display = `none`;
+      // document.getElementById("addCart").style.display = `none`;
     }
 
   }, [quantity]);
@@ -48,7 +67,13 @@ export default function Card({data, star, key, add, coeur, substract, display_it
           </div>
           
           <div className="buy w-[70%] h-[2.5rem] flex justify-center items-center mb-1 absolute bottom-8">
-          <button onClick={() => {add(data.price), substract(data.price), decrementQty(),display_current_card(), addToBag(data.id) }} className="hover:border-black bg-gradient-to-r from-black to-gray-700   border-solid border-2 w-5/6 h-full rounded-md ml-[60px] bg-black text-white transition duration-200" id='addCart'> {quantity > 1 ? "ADD TO CART" : "ONLY ONE LEFT"}</button>
+
+            {quantity > 0 ?
+
+                <button onClick={() => {add(data.price), substract(data.price), decrementQty(),display_current_card(), addToBag(data) }} className="hover:border-black bg-gradient-to-r from-black to-gray-700   border-solid border-2 w-5/6 h-full rounded-md ml-[60px] bg-black text-white transition duration-200" id='addCart'> {quantity > 1 ? "ADD TO CART" : "ONLY ONE LEFT"}</button>
+
+                : <p className='text-[2rem] text-red-800  absolute right-6  '>OUT OF STOCK</p>
+            }
           </div>
         </div>
         

@@ -1,9 +1,33 @@
-import React from 'react'
+import React, { useState } from 'react'
 import SideBarItem from '../SideBarItem/SideBarItem'
 
 
-export default function SideBar({data, items, bagItems, toggleSB}) {
-  console.log(bagItems);
+export default function SideBar({data, items, bagItems, toggleSB,originalListProduct,bagProducts}) {
+
+  /** original with all informations about products */
+  // console.log(originalListProduct);
+
+
+  /** current bag  */
+  // console.log(bagProducts);
+
+  const [updatedBag, SetUpdatedBag] = useState([]);
+
+  let addBag = (tab) =>{
+
+    tab.map((element)=>{
+      console.log(element);
+    })
+
+    // SetUpdatedBag([...updatedBag, ])
+  }
+
+  // addBag(bagProducts)
+
+  console.log(updatedBag);
+
+  const uniqueProductIds = new Set(bagProducts.map(product => product.id));
+
 
   return (
 
@@ -16,11 +40,15 @@ export default function SideBar({data, items, bagItems, toggleSB}) {
         {/* place to put items  */}
 
         {/* <SideBarItem data={data} items={items} /> */}
-        {bagItems.map((element) =>{
+        {bagProducts.map((element) =>{
           console.log(element.name);
-          if (element.qty > 0) {
-            
-            return < SideBarItem key={element.id} name={element.name} qty={element.qty} src={element.image} />
+
+          const productIndex = bagProducts.findIndex(item => item.id == element.id);
+
+          console.log(productIndex);
+          if (element.quantity > 0 &&  uniqueProductIds.has(element.id)) {
+            uniqueProductIds.delete(element.id);
+            return < SideBarItem key={element.id} name={element.name} qty={element.quantity} src={element.image}  price={element.price}/>
           }
         })}
         {/* < SideBarItem data={data} items={items} /> */}

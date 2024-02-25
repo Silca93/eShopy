@@ -7,22 +7,28 @@ import InfoBanner from '../InfoBanner/InfoBanner';
 
 export default function Body({data, star, logo, fond, chercher, shop, coeur, money, budget, add, substract, count}) {
 
-  let bag_items = [];
+  // original list of products directly from data.json
+  let list_product_data = [];
   data.map((items) =>{
-    console.log(items.name);
-    bag_items.push({ "name":items.name,
-                      "id": items.id,
-                      "qty": 0,
+    
+   list_product_data.push({ "id": items.id,
+                      "name": items.name,
+                      "stock": items.quantity,
+                      
                       "image":items.image,
-                      "description":items.description});     
+                      });     
   })
+  
+  // current bag with usestate 
+  const [bagProducts, setbagItems] = useState([]);
 
-  const [bagItems, setbagItems] = useState([]);
 
-  let addToBag = (productId) =>{
-    setbagItems( [...bagItems, productId])
+  let addToBag = (product) =>{
+
+    setbagItems( [...bagProducts, product])
   }
 
+  // console.log(bagProducts);
 
   /**   Count item in array
    * 
@@ -38,22 +44,33 @@ export default function Body({data, star, logo, fond, chercher, shop, coeur, mon
     })
     return cpt;
   }
+  
+  // console.log(countItem("headset", bagProducts));
 
-  // countItem("hello", bag_items);
-  // console.log(t);
-
+ 
   let testItems = (tab, tab2) =>{
     let cpt_element = 0;
-    tab.map((element) =>{
-      console.log(element); 
-      cpt_element = countItem(element, tab)
-      
-      tab2.map((element2) =>{
-        if (element == element2.name) {
-          element2.qty = cpt_element;
 
-          console.log( element + " has " + element2.qty);
-          // console.log("hello");
+    //check first array : in this case, it will be original list of products by json file
+
+    tab.map((element) =>{
+      console.log("product by json file  : " + element.id); 
+      // cpt_element = countItem(element, tab)
+      
+
+      //check second array : in this case, it will be current bag 
+
+      tab2.map((element2) =>{
+        // console.log( "product by current bag  : " +element2.name);
+        cpt_element = countItem(element2, tab2)
+        // console.log(`There are ${cpt_element} ${element2} in current bag`);
+        if (element.name == element2.name) {
+
+
+
+          element2.quantity = cpt_element;
+          console.log(`There are ${element2.quantity} ${element2.name} in current bag`);
+
         }
       })
       
@@ -61,17 +78,24 @@ export default function Body({data, star, logo, fond, chercher, shop, coeur, mon
 
   };
 
-  testItems(bagItems, bag_items);
-  // testItems(bagItems);
-  // console.log(bag_items);
 
-  const [bagItemsArray, setBagItemsArray] = useState(bag_items);
+
+  console.log(bagProducts);
+
+
+  
+
+  testItems( list_product_data, bagProducts);
+  // testItems(bagProducts);
+  // console.log list_product_data);
+
+  // const [bagItemsArray, setBagItemsArray] = useState (list_product_data);
   // console.log(bagItemsArray);
 
   // console.log(bagItemsArray);
 
   // let updateBagArray =()=>{
-  //   setBagItemsArray( [...bagItems, bagItemsArray])
+  //   setBagItemsArray( [...bagProducts, bagItemsArray])
   // }
 
   // updateBagArray();
@@ -81,7 +105,8 @@ export default function Body({data, star, logo, fond, chercher, shop, coeur, mon
   return (
     <div className="body bg-[#222222] w-full overflow-x-hidden flex flex-col gap-[1rem]">
       
-        <Header logo={logo} chercher={chercher} shop={shop} coeur={coeur} money={money} budget={budget} count={count} add={add} data={data} bagItems={bag_items} />
+        <Header logo={logo} chercher={chercher} shop={shop} coeur={coeur} money={money} budget={budget} count={count} add={add} data={data} 
+          originalListProduct={list_product_data} bagProducts={bagProducts} addToBag={addToBag}/>
 
         <div className="techNest text-white text-[40px] flex justify-center items-center">
         <h1><span class="actual-text">&nbsp;&nbsp;</span> <p className='text-amber-800'></p>
@@ -97,7 +122,7 @@ export default function Body({data, star, logo, fond, chercher, shop, coeur, mon
                   
           {data.map((element, key) => 
           <Card key={key} data={element} star={star} coeur={coeur} add={add} substract={substract} 
-           addToBag={addToBag} />
+           addToBag={addToBag} originalListProduct={list_product_data} />
           )}
            
         </div>
