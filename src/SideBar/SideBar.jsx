@@ -17,10 +17,10 @@ export default function SideBar({data, items, bagItems, toggleSB}) {
 
         {/* <SideBarItem data={data} items={items} /> */}
         {bagItems.map((element) =>{
-          console.log(element);
+          console.log(element.name);
           if (element.qty > 0) {
             
-            return < SideBarItem key={element.name} name={element.name} qty={element.qty} src={element.image} />
+            return < SideBarItem key={element.id} name={element.name} qty={element.qty} src={element.image} />
           }
         })}
         {/* < SideBarItem data={data} items={items} /> */}

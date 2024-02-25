@@ -4,7 +4,7 @@ import React from 'react'
 export default function SideBarItem({data, items, qty, name, src}) {
     // console.log(items);
     // console.log(qty);
-    // console.log(name);
+    console.log(name);
     // console.log();
     // console.log(data[0].image);
   return (
