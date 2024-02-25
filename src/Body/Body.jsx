@@ -65,7 +65,7 @@ export default function Body({data, star, logo, fond, chercher, shop, coeur, mon
         <Header logo={logo} chercher={chercher} shop={shop} coeur={coeur} money={money} budget={budget} count={count} add={add} data={data} bagItems={bag_items}/>
 
         <div className="techNest text-white text-[40px] flex justify-center items-center">
-        <h1><span class="actual-text">&nbsp;&nbsp;</span> <p className='text-amber-800'>{bagItems}</p>
+        <h1><span class="actual-text">&nbsp;&nbsp;</span> <p className='text-amber-800'></p>
         <span aria-hidden="true" className="hover-text max-[768px]:text-[25px]">&nbsp;ELEVATE YOUR TECH SPACE&nbsp;</span></h1>
         </div>
 
