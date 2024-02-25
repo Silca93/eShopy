@@ -1,5 +1,6 @@
 import React from 'react'
-import DELETE from '../assets/images/del.png'
+// import DELETE from '../assets/images/del.png'
+// import DELETE from '../assets/images/bouton-supprimer.png'
 
 
 export default function SideBarItem({data, items, qty, name, src,price}) {
@@ -29,13 +30,13 @@ export default function SideBarItem({data, items, qty, name, src,price}) {
 
         </div>
 
-        <div className="right w-[25%]  h-full rounded-r-lg flex flex-col justify-center items-center bg-red-400">
+        <div className="right w-[25%]  h-full rounded-r-lg flex flex-col justify-center items-center ">
             
             {/* quantity content */}
 
-            <p className='text-[0.8rem]'>QTY : <p className='text-black'> &nbsp; {qty}</p> </p>
+            <p className='text-[1.2rem]  flex'>QTY : <p className='text-black'>  &nbsp;{qty}</p> </p>
 
-            <button type="button ">{DELETE}</button>
+            <button type="button " className='text-white bg-red-700 h-[1.4rem] w-[1.4rem] rounded-xl text-[0.9rem] '>X</button>
 
         </div>
       

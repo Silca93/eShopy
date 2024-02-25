@@ -41,7 +41,7 @@ export default function SideBar({data, items, bagItems, toggleSB,originalListPro
 
         {/* <SideBarItem data={data} items={items} /> */}
         {bagProducts.map((element) =>{
-          console.log(element.name);
+          // console.log(element.name);
 
           const productIndex = bagProducts.findIndex(item => item.id == element.id);
 

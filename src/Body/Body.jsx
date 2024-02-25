@@ -25,6 +25,8 @@ export default function Body({data, star, logo, fond, chercher, shop, coeur, mon
 
   let addToBag = (product) =>{
 
+    // console.log(budget);
+
     setbagItems( [...bagProducts, product])
   }
 
@@ -54,7 +56,7 @@ export default function Body({data, star, logo, fond, chercher, shop, coeur, mon
     //check first array : in this case, it will be original list of products by json file
 
     tab.map((element) =>{
-      console.log("product by json file  : " + element.id); 
+      // console.log("product by json file  : " + element.id); 
       // cpt_element = countItem(element, tab)
       
 
@@ -122,7 +124,7 @@ export default function Body({data, star, logo, fond, chercher, shop, coeur, mon
                   
           {data.map((element, key) => 
           <Card key={key} data={element} star={star} coeur={coeur} add={add} substract={substract} 
-           addToBag={addToBag} originalListProduct={list_product_data} />
+           addToBag={addToBag} originalListProduct={list_product_data} budget={budget} />
           )}
            
         </div>
