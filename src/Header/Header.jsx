@@ -2,8 +2,9 @@ import React from 'react'
 import { useEffect, useState, useRef } from 'react'
 import "../Header/Header.css"
 import SideBar from '../SideBar/SideBar'
+
 import Bag from '../Bag/Bag'
-export default function Header({logo, chercher, shop, coeur, money, budget, count, add, data}) {
+export default function Header({logo, chercher, shop, coeur, money, budget, count, add, data, bagItems}) {
     // console.log(data);
     const [topNavbar, setTopNavbar] = useState(null);
     const clickburger = useRef(null)
@@ -29,6 +30,9 @@ export default function Header({logo, chercher, shop, coeur, money, budget, coun
     }
 
     //? props.setmonpannier([...props.monpannier, props.marque])
+    console.log(bagItems);
+
+    //drawer code 
 
 
     // }, [topNavbar]);
@@ -52,7 +56,7 @@ export default function Header({logo, chercher, shop, coeur, money, budget, coun
                 <img className="nestech max-[1024px]:w-[200px] max-[1024px]:h-[120px] max-[630px]:hidden" src={logo} alt="" width="300px" height="100%" />
             </div>
             <div className="right h-full w-1/3 flex justify-end gap-6 items-center pr-5 max-[900px]:gap-2 max-[630px]:w-2/3">
-                <div className="h-[55%] w-[150px] bg-black rounded-3xl flex justify-center items-center gap-4 overflow-hidden max-[1085px]:w-[250px] max-[890px]:w-[200px] max-[890px]:h-[60%] max-[890px]:gap-1 max-[890px]:flex max-[630px]:w-[100px] ">
+                <div className="h-[55%] w-[140px] bg-black rounded-3xl flex justify-center items-center gap-4 overflow-hidden max-[1085px]:w-[200px] max-[890px]:w-[200px] max-[890px]:h-[60%] max-[890px]:gap-1 max-[890px]:flex max-[630px]:w-[80px] ">
                      <div className="h-[30px] w-[30px] bg-white rounded-full flex justify-center items-center max-[890px]:h-[25px] max-[890px]:w-[25px] ">
                          <img className="" src={money} alt="" />
                      </div>
@@ -67,7 +71,7 @@ export default function Header({logo, chercher, shop, coeur, money, budget, coun
                 <div className="mid">
                     <img src={coeur} className="" width="25px" height="25px" alt="" />
                 </div>
-                <div className="right cursor-pointer" onClick={()=>{handleToggle()}} >
+                <div className="right cursor-pointer" onClick={()=>{handleToggle(), appearBag()}} >
 
                     {/* bag component place */}
 
@@ -77,10 +81,20 @@ export default function Header({logo, chercher, shop, coeur, money, budget, coun
                 <span className="circle_bag">{count}</span>
                 </div>
             </div>
+
+            
+        </div>
+
+        <div className="">  
+
+
+
+         <SideBar toggleSB={toggleSB} data={data} items={count} bagItems={bagItems}  /> 
         </div>
         {/* side bar place */}
 
-        { toggleSB ? <SideBar data={data} items={count} /> : ""}
     </div> 
   )
 }
+
+

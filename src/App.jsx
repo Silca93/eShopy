@@ -41,7 +41,7 @@ function App() {
   }
 
   return (
-    <div className="bg-[#222222]">
+    <div className="bg-[#222222] w-full h-screen">
       <Body data={DATA} star={star} logo={logo} fond={bannerImg} chercher={chercher} shop={shopCart} coeur={coeur} money={money} budget={budget} add={incrementCart} substract={decrementBudget} count={count}/>
     </div>
   )

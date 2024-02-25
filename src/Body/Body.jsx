@@ -10,7 +10,8 @@ export default function Body({data, star, logo, fond, chercher, shop, coeur, mon
   let bag_items = [];
   data.map((items) =>{
     bag_items.push({ "name" :items.id,
-                      "qty": 0});     
+                      "qty": 0,
+                      "image":items.image});     
   })
 
   const [bagItems, setbagItems] = useState([]);
@@ -43,10 +44,14 @@ export default function Body({data, star, logo, fond, chercher, shop, coeur, mon
     tab.map((element) =>{
       console.log(element); 
       cpt_element = countItem(element, tab)
-      console.log( element + " has " + cpt_element);
       
       tab2.map((element2) =>{
-        element2.qty = cpt_element;
+        if (element == element2.name) {
+          element2.qty = cpt_element;
+
+          console.log( element + " has " + element2.qty);
+          // console.log("hello");
+        }
       })
       
     })
@@ -55,14 +60,25 @@ export default function Body({data, star, logo, fond, chercher, shop, coeur, mon
 
   testItems(bagItems, bag_items);
   // testItems(bagItems);
-  console.log(bag_items);
+  // console.log(bag_items);
+
+  const [bagItemsArray, setBagItemsArray] = useState(bag_items);
+  // console.log(bagItemsArray);
+
+  // console.log(bagItemsArray);
+
+  // let updateBagArray =()=>{
+  //   setBagItemsArray( [...bagItems, bagItemsArray])
+  // }
+
+  // updateBagArray();
 
 
 
   return (
-    <div className="body bg-[#222222] w-screen overflow-x-hidden flex flex-col gap-[1rem]">
+    <div className="body bg-[#222222] w-full overflow-x-hidden flex flex-col gap-[1rem]">
       
-        <Header logo={logo} chercher={chercher} shop={shop} coeur={coeur} money={money} budget={budget} count={count} add={add} data={data} bagItems={bag_items}/>
+        <Header logo={logo} chercher={chercher} shop={shop} coeur={coeur} money={money} budget={budget} count={count} add={add} data={data} bagItems={bag_items} />
 
         <div className="techNest text-white text-[40px] flex justify-center items-center">
         <h1><span class="actual-text">&nbsp;&nbsp;</span> <p className='text-amber-800'></p>

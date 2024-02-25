@@ -48,7 +48,7 @@ export default function Card({data, star, key, add, coeur, substract, display_it
           </div>
           
           <div className="buy w-[70%] h-[2.5rem] flex justify-center items-center mb-1 absolute bottom-8">
-            <button onClick={() => {add(data.price), substract(data.price), decrementQty(),display_current_card(), addToBag(data.id) }} className="hover:border-black bg-gradient-to-r from-black to-gray-700   border-solid border-2 w-5/6 h-full rounded-md ml-[60px] bg-black text-white transition duration-200" id='addCart'> {quantity > 1 ? "ADD TO CART" : "ONLY ONE LEFT"}</button>
+          <button onClick={() => {add(data.price), substract(data.price), decrementQty(),display_current_card(), addToBag(data.id) }} className="hover:border-black bg-gradient-to-r from-black to-gray-700   border-solid border-2 w-5/6 h-full rounded-md ml-[60px] bg-black text-white transition duration-200" id='addCart'> {quantity > 1 ? "ADD TO CART" : "ONLY ONE LEFT"}</button>
           </div>
         </div>
         

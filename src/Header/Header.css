@@ -19,3 +19,25 @@
     color: white;
 }
 
+body {
+    margin: 0;
+    padding: 0;
+  }
+  .wrapper {
+    height: 90vh;
+    max-width: 50vh;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    overflow: hidden;
+    margin: 40px;
+  }
+  
+  .sidebar_container {
+    height: 100%;
+    background-color: rgb(250, 207, 213);
+    padding: 30px;
+    position: relative;
+    z-index: 30;
+  }
+  
+  
