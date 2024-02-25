@@ -9,9 +9,12 @@ export default function Body({data, star, logo, fond, chercher, shop, coeur, mon
 
   let bag_items = [];
   data.map((items) =>{
-    bag_items.push({ "name" :items.id,
+    console.log(items.name);
+    bag_items.push({ "name":items.name,
+                      "id": items.id,
                       "qty": 0,
-                      "image":items.image});     
+                      "image":items.image,
+                      "description":items.description});     
   })
 
   const [bagItems, setbagItems] = useState([]);

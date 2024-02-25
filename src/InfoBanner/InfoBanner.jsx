@@ -10,9 +10,9 @@ export default function InfoBanner() {
 
         <div className="info_banner_box w-[98%] h-full flex justify-center items-center bg-[rgb(217,217,217)] rounded-[1.5rem]">
 
-            <div className="info_banner_box_inside w-[90%] h-[40%]  flex flex-row ">
+            <div className="info_banner_box_inside w-[90%] h-[40%]  flex flex-row flex-wrap ">
 
-                <ul className='w-full h-full flex '>
+                <ul className='w-full h-full flex flex-wrap'>
 
 
                     <li className='h-full w-1/4  '>

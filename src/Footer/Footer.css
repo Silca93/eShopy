@@ -1,52 +1,462 @@
 
 
-.title_box{
-    /* background-color: red; */
-}
-.title_box span{
-    /* background-color: red; */
-}
-.title_box span:after{
-    content: "";
-    display: block;
-    width: 3rem;
 
-    border-top: 2px solid white;
-}
 
-/********** responsive start **********/
+/***************************  responsive start  **************************/
 
-@media (width >= 375px) and (width <= 425px){
 
-    .footer_ {
+
+/*************** 1440px screen start **************/
+
+@media (min-width : 1440px) {
+    
+    .footer{
         /* background-color: red; */
-        flex-direction: column;
-        height: 40rem !important;
-        flex-direction: column;
+        /* height: 18rem !important; */
+    }
 
-        
+    .footer_box{
+        /* height: 98% !important; */
+        /* background-color: blue !important; */
     }
-    .footer_ .footer_box {
-        background-color: green;
-        flex-direction: column;
-        /* height: fit-content; */
-    }
-    .footer_ .footer_box .footer_box_inside {
-        background-color: blue;
-        /* flex-direction: column; */
-        /* height: fit-content; */
-    }
-    .footer_ .footer_box .footer_box_inside ul {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr) !important;
-        grid-template-rows: repeat(2, 1fr) !important ;
-        /* background-color: yellow; */
-        /* flex-direction: column; */
-        /* flex-direction: column; */
-        /* height: fit-content; */
+
+    .inside_box{
+        /* background-color: aqua; */
+        /* grid-template-columns: 6 !important;
+        grid-template-columns: 1 !important; */
     }
 }
 
-/********** responsive end **********/
 
 
+
+/*************** 1440px screen end **************/
+
+
+/* 
+
+
+<div className="footer w-full h-[52rem]  mb-[40dvh]  " >
+
+      
+<div className="footer_box w-[98%] h-[90%] m-auto   rounded-[2.5rem] bg-[rgba(59,59,59,1)] flex flex-col justify-end  ">
+
+   <div className="inside_box w-[90%] h-[90%] mx-auto grid grid-cols-2 grid-rows-3 gap-2 min-[1440px]: ">
+
+                             {who we are area start }
+
+       <div className="row-start-1  flex flex-col h-full w-full ">
+
+           <div className="title_box w-full h-[20%]  flex items-center relative ">
+
+             <h2 className='text-[1.1rem] font-medium text-white text-start inline-block '>Who We Are ?</h2>
+             <span class="absolute bottom-[0.4rem] left-0 w-[2.5rem] h-[0.12rem]  bg-white"></span>
+
+           </div> 
+
+           <div className="text_content w-full h-[80%]">
+
+             <ul className='h-full w-full  flex flex-col gap-3 text-start justify-evenly '>
+
+               <li className=''>
+                 
+                 <a href="#">
+                     <p className='text-[1.1rem] text-white'>Who We Are ?</p>
+
+                 </a>
+
+               </li>
+
+               <li className=''>
+                 
+                 <a href="#">
+                 <p className=' text-[1.1rem] text-white'>Our Services</p>
+
+
+                 </a>
+
+               </li>
+
+               <li className=''>
+                 
+                 <a href="#"> 
+
+                   <p className='text-[1.1rem] text-white'>Contact Us</p>
+
+                 </a>
+
+               </li>
+
+             </ul>
+
+           </div>
+
+       </div>
+                         {who we are area end }
+
+                         {One question area start }
+
+
+       <div className="row-start-1  flex flex-col h-full w-full items-center" >
+
+           <div className="title_box w-2/3 h-[20%] flex items-center relative ">
+
+           <h2 className='text-[1.1rem] font-medium text-white text-start inline-block '>Have A Question ?</h2>
+             <span class="absolute bottom-[0.4rem] left-0 w-[2.5rem] h-[0.12rem]  bg-white"></span>
+           </div>
+
+           <div className="text_content w-full h-[80%] flex justify-end ">
+
+             <ul className='h-full w-5/6  flex flex-col gap-3 text-start justify-evenly '>
+
+               <li className=''>
+
+                 <a href="#">
+                     <p className='text-[1.1rem] text-white'>Help Section / FAQ</p>
+
+                 </a>
+
+               </li>
+
+               <li className=''>
+
+                 <a href="#">
+                 <p className=' text-[1.1rem] text-white'>Payement, Deliveries</p>
+
+
+                 </a>
+
+               </li>
+
+               <li className=''>
+
+                 <a href="#"> 
+
+                   <p className='text-[1.1rem] text-white'>CS, Request a Return</p>
+
+                 </a>
+
+               </li>
+
+             </ul>
+
+           </div>
+
+       </div>
+                     {One question area end }
+
+                     {information area start }
+
+       <div className="row-start-2  flex flex-col h-full w-full">
+
+         <div className="title_box w-full h-[20%] flex items-center relative ">
+
+         <h2 className='text-[1.1rem] font-medium text-white text-start inline-block '>Informations</h2>
+           <span class="absolute bottom-[0.4rem] left-0 w-[2.5rem] h-[0.12rem]  bg-white"></span>
+
+         </div>
+           
+         <div className="text_content w-full h-[80%] ">
+           
+           <ul className='h-full w-full  flex flex-col gap-3 text-start justify-evenly '>
+           
+             <li className=''>
+           
+               <a href="#">
+                   <p className='text-[1.1rem] text-white'>Site Map</p>
+           
+               </a>
+           
+             </li>
+           
+             <li className=''>
+           
+               <a href="#">
+               <p className=' text-[1.1rem] text-white'>General Terms and Conditions</p>
+           
+           
+               </a>
+           
+             </li>
+           
+             <li className=''>
+           
+               <a href="#"> 
+           
+                 <p className='text-[1.1rem] text-white'>Manage Your Cookies</p>
+           
+               </a>
+           
+             </li>
+           
+           </ul>
+           
+         </div>
+
+       </div>
+
+                                   {information area end }
+
+                                   {social media area start}
+
+       <div className="row-start-2  flex flex-col h-full w-full  items-center ">
+
+         <div className="title_box w-2/3 h-[20%] flex items-center relative ">
+
+           <h2 className='text-[1.1rem] font-medium text-white text-start inline-block '>Social Media</h2>
+             <span class="absolute bottom-[0.4rem] left-0 w-[2.5rem] h-[0.12rem]  bg-white"></span>
+
+         </div>
+
+         <div className="text_content w-full h-[80%]  flex ">
+
+           <ul className='h-1/2 w-1/2   grid grid-cols-2 grid-rows-2 gap-[0.6rem] mt-[1.8rem]  ml-[1.8rem]'>
+               <li className='row-start-1   flex flex-col '>
+
+                 
+                 <a href="#">
+
+                   <div className="box_media w-[2rem]  h-[2rem] ">
+                     <img src={INSTA} alt="" srcset="" />
+                   </div>
+
+
+                 </a>
+
+               </li>
+
+               <li className='row-start-1  flex flex-col '>
+
+                 
+                 <a href="#">
+
+                   <div className="box_media w-[2rem]  h-[2rem] ">
+                     <img src={TWI} alt="" srcset="" />
+                   </div>
+
+
+                 </a>
+
+               </li>
+
+               <li className='row-start-2  flex justify-end min-[376px]:max-[425px]:bg-red-600'>
+                 
+                 <a href="#">
+
+                   <div className="box_media w-[2rem]  h-[2rem] flex ">
+                   <img src={FB} alt="" srcset="" className='' />
+
+                   </div>
+
+
+                 </a>
+
+               </li>
+
+               <li className='row-start-2 '>
+                 
+                 <a href="#">
+
+                   <div className="box_media w-[2rem]  h-[2rem]">
+                   <img src={TIC} alt="" srcset="" />
+
+                   </div>
+
+
+                 </a>
+
+               </li>
+
+           </ul>
+
+         </div>
+
+       </div>
+
+                                   {social media area end}
+
+                                   {payment area start}
+
+
+
+       <div className="row-start-3 flex flex-col h-full w-full">
+
+
+           <div className="title_box w-full h-[20%] flex items-center relative ">
+
+             <h2 className='text-[1.1rem] font-medium text-white text-start inline-block '>Accepted Payment Methods</h2>
+             <span class="absolute bottom-[0.4rem] left-0 w-[2.5rem] h-[0.12rem]  bg-white"></span>
+
+           </div>
+
+           <div className="text_content w-full h-[80%] ">
+
+             <ul className='h-1/2 w-5/6  grid grid-cols-3 grid-rows-2 mt-[1.8rem]'>
+
+               <li className='row-start-1   flex flex-col  '>
+
+                 
+                 <a href="#">
+
+                   <div className="box_media w-[2rem] rounded-[0.3rem]  h-[1.4rem] ">
+                     <img src={VISA} alt="" srcset="" className='w-full h-full' />
+                   </div>
+
+
+                 </a>
+
+               </li>
+
+               <li className='row-start-1  flex flex-col  '>
+
+                 
+                 <a href="#">
+
+                   <div className="box_media w-[2rem] rounded-[0.3rem]  h-[1.4rem]  ">
+                   <img src={MCARD} alt="" srcset="" className='w-full h-full' />
+                   </div>
+
+
+                 </a>
+
+               </li>
+
+               <li className='row-start-1  flex  '>
+                 
+                 <a href="#">
+
+                   <div className="box_media w-[2rem] rounded-[0.3rem]  h-[1.4rem] flex ">
+                   <img src={APPLEPAY} alt="" srcset="" className='w-full h-full' />
+
+                   </div>
+
+
+                 </a>
+
+               </li>
+
+               <li className='row-start-2  '>
+                 
+                 <a href="#">
+
+                   <div className="box_media w-[2rem] rounded-[0.3rem]  h-[1.4rem] ">
+                   <img src={BANKTRANSFERT} alt="" srcset="" className='w-full h-full' />
+
+                   </div>
+
+
+                 </a>
+
+               </li>
+
+               <li className='row-start-2  '>
+                 
+                 <a href="#">
+
+                   <div className="box_media w-[2rem] rounded-[0.3rem]  h-[1.4rem] ">
+                   <img src={PAYPAL} alt="" srcset="" className='w-full h-full' />
+
+                   </div>
+
+
+                 </a>
+
+               </li>
+
+             </ul>
+
+           </div>
+
+       </div>
+
+                                                 {payment area end}
+
+
+                                                 {trasnporters area start}
+
+
+       <div className="row-start-3 flex flex-col  h-full w-full  items-center ">
+
+         <div className="title_box w-2/3 h-[20%] flex items-center relative  ">
+
+           <h2 className='text-[1.1rem] font-medium text-white text-start inline-block '>Our Transporters</h2>
+           <span class="absolute bottom-[0.4rem] left-0 w-[2.5rem] h-[0.12rem]  bg-white"></span>
+
+         </div>
+
+           <div className="text_content w-full h-[80%]  flex justify-end">
+
+             <ul className='h-1/2 w-5/6  grid grid-cols-3 grid-rows-2 mt-[1.8rem] '>
+
+               <li className='row-start-1   flex flex-col  '>
+
+
+                 <a href="#">
+
+                   <div className="box_media w-[2rem] rounded-[0.3rem]  h-[1.4rem] bg-white">
+                     <img src={BPOST} alt="" srcset="" className='w-full h-full' />
+                   </div>
+
+
+                 </a>
+
+               </li>
+
+               <li className='row-start-1  flex flex-col  '>
+
+
+                 <a href="#">
+
+                   <div className="box_media w-[2rem] rounded-[0.3rem]  h-[1.4rem] bg-white flex justify-center ">
+                   <img src={FEDEX} alt="" srcset="" className='w-3/4 h-full' />
+                   </div>
+
+
+                 </a>
+
+               </li>
+
+               <li className='row-start-1  flex  '>
+
+                 <a href="#">
+
+                   <div className="box_media w-[2rem] rounded-[0.3rem]  h-[1.4rem]  bg-white flex justify-center ">
+                   <img src={POSTNL} alt="" srcset="" className='w-2/3 h-full' />
+
+                   </div>
+
+
+                 </a>
+
+               </li>
+
+               <li className='row-start-2  '>
+
+                 <a href="#">
+
+                   <div className="box_media w-[2rem] rounded-[0.3rem]  h-[1.4rem] bg-white flex justify-center">
+                   <img src={UPS} alt="" srcset="" className=' w-1/2 h-full' />
+
+                   </div>
+
+
+                 </a>
+
+               </li>
+
+
+
+             </ul>
+
+           </div>
+
+       </div>      
+
+
+
+   </div>
+
+</div>
+
+
+</div> */
