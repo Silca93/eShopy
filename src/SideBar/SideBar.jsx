@@ -1,9 +1,19 @@
 import React from 'react'
 import SideBarItem from '../SideBarItem/SideBarItem'
+import { useState } from 'react';
 
 
-export default function SideBar({data, items, bagItems, toggleSB}) {
+export default function SideBar({data, items, bagItems, trash, toggleSB}) {
   console.log(bagItems);
+
+
+  // const [quantity, setQuantity] = useState(data.quantity);
+  
+  // let incrementQty = () => {
+  //   setQuantity(quantity + 1)
+    
+  //   console.log(quantity);
+  // }
 
   return (
 
@@ -20,7 +30,7 @@ export default function SideBar({data, items, bagItems, toggleSB}) {
           console.log(element);
           if (element.qty > 0) {
             
-            return < SideBarItem key={element.name} name={element.name} qty={element.qty} src={element.image} />
+            return < SideBarItem key={element.name} name={element.name} qty={element.qty} src={element.image} trash={trash} data={data} />
           }
         })}
         {/* < SideBarItem data={data} items={items} /> */}

@@ -9,6 +9,7 @@ import shopCart from './assets/images/sac-de-courses.png'
 import chercher from './assets/images/chercher.png'
 import coeur from './assets/images/contour-coeur.png'
 import money from './assets/images/account.svg'
+import trash from './assets/images/trash-can-solid.svg'
 
 // components //
 import Card from './Card/Card'
@@ -42,7 +43,7 @@ function App() {
 
   return (
     <div className="bg-[#222222] w-full h-screen">
-      <Body data={DATA} star={star} logo={logo} fond={bannerImg} chercher={chercher} shop={shopCart} coeur={coeur} money={money} budget={budget} add={incrementCart} substract={decrementBudget} count={count}/>
+      <Body data={DATA} star={star} logo={logo} fond={bannerImg} chercher={chercher} shop={shopCart} coeur={coeur} money={money} budget={budget} trash={trash} add={incrementCart} substract={decrementBudget} count={count}/>
     </div>
   )
 }

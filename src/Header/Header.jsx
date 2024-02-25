@@ -4,7 +4,7 @@ import "../Header/Header.css"
 import SideBar from '../SideBar/SideBar'
 
 import Bag from '../Bag/Bag'
-export default function Header({logo, chercher, shop, coeur, money, budget, count, add, data, bagItems}) {
+export default function Header({logo, chercher, shop, coeur, money, budget, count, add, data, trash, bagItems}) {
     // console.log(data);
     const [topNavbar, setTopNavbar] = useState(null);
     const clickburger = useRef(null)
@@ -75,7 +75,7 @@ export default function Header({logo, chercher, shop, coeur, money, budget, coun
 
                     {/* bag component place */}
 
-                    <Bag shop={shop} items={count} />
+                    <Bag shop={shop} items={count} trash={trash} />
                 {/* <img src={shop} width="25px" height="25px" alt="" id='shop_bag'/> */}
 
                 <span className="circle_bag">{count}</span>
@@ -89,7 +89,7 @@ export default function Header({logo, chercher, shop, coeur, money, budget, coun
 
 
 
-         <SideBar toggleSB={toggleSB} data={data} items={count} bagItems={bagItems}  /> 
+         <SideBar toggleSB={toggleSB} data={data} items={count} bagItems={bagItems} trash={trash} /> 
         </div>
         {/* side bar place */}
 

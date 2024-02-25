@@ -5,7 +5,7 @@ import Banner from '../Banner/Banner'
 import Footer from '../Footer/Footer';
 import InfoBanner from '../InfoBanner/InfoBanner';
 
-export default function Body({data, star, logo, fond, chercher, shop, coeur, money, budget, add, substract, count}) {
+export default function Body({data, star, logo, fond, chercher, shop, coeur, money, trash, budget, add, substract, count}) {
 
   let bag_items = [];
   data.map((items) =>{
@@ -19,6 +19,14 @@ export default function Body({data, star, logo, fond, chercher, shop, coeur, mon
   let addToBag = (productId) =>{
     setbagItems( [...bagItems, productId])
   }
+
+  const [quantity, setQuantity] = useState(data.quantity);
+  
+  let decrementQty = () =>{
+
+    if (quantity > 0) { setQuantity( (prevValue) => prevValue -1);}
+  }
+
 
 
   /**   Count item in array
@@ -78,7 +86,7 @@ export default function Body({data, star, logo, fond, chercher, shop, coeur, mon
   return (
     <div className="body bg-[#222222] w-full overflow-x-hidden flex flex-col gap-[1rem]">
       
-        <Header logo={logo} chercher={chercher} shop={shop} coeur={coeur} money={money} budget={budget} count={count} add={add} data={data} bagItems={bag_items} />
+        <Header logo={logo} chercher={chercher} shop={shop} coeur={coeur} money={money} budget={budget} trash={trash} count={count} add={add} data={data} bagItems={bag_items} />
 
         <div className="techNest text-white text-[40px] flex justify-center items-center">
         <h1><span class="actual-text">&nbsp;&nbsp;</span> <p className='text-amber-800'></p>
@@ -93,7 +101,7 @@ export default function Body({data, star, logo, fond, chercher, shop, coeur, mon
         <div className="cardsDiv w-full h-[120rem] flex overflow-x-hidden justify-center max-[883px]:bg-[#222222] max-[883px]:items-center max-[500px]:h[100%] max-[500px]:bg-[#222222] gap-4 flex-wrap mt-3">
                   
           {data.map((element, key) => 
-          <Card key={key} data={element} star={star} coeur={coeur} add={add} substract={substract} 
+          <Card key={key} data={element} star={star} coeur={coeur} trash={trash} add={add} substract={substract} quantity={quantity} decrement={decrementQty}
            addToBag={addToBag} />
           )}
            
