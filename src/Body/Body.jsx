@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect, useRef} from 'react'
 import Card from '../Card/Card'
 import Header from '../Header/Header'
 import Banner from '../Banner/Banner'
@@ -22,11 +22,7 @@ export default function Body({data, star, logo, fond, chercher, shop, coeur, mon
 
   const [quantity, setQuantity] = useState(data.quantity);
   
-  let decrementQty = () =>{
-
-    if (quantity > 0) { setQuantity( (prevValue) => prevValue -1);}
-  }
-
+  
 
 
   /**   Count item in array
@@ -101,7 +97,7 @@ export default function Body({data, star, logo, fond, chercher, shop, coeur, mon
         <div className="cardsDiv w-full h-[120rem] flex overflow-x-hidden justify-center max-[883px]:bg-[#222222] max-[883px]:items-center max-[500px]:h[100%] max-[500px]:bg-[#222222] gap-4 flex-wrap mt-3">
                   
           {data.map((element, key) => 
-          <Card key={key} data={element} star={star} coeur={coeur} trash={trash} add={add} substract={substract} quantity={quantity} decrement={decrementQty}
+          <Card key={key} data={element} star={star} coeur={coeur} trash={trash} add={add} substract={substract} quantity={data.quantity} 
            addToBag={addToBag} />
           )}
            

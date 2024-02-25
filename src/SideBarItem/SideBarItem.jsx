@@ -15,7 +15,6 @@ export default function SideBarItem({data, items, qty, name, src, trash, increme
   
     let removeItem = () => {
       amount.current.className = "hidden"
-      
        
     }
   

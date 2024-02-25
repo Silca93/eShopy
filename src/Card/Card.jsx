@@ -9,7 +9,6 @@ export default function Card({data, star, key, add, coeur, substract, display_it
   // console.log(data.id);
 
   const [quantity, setQuantity] = useState(data.quantity);
-  
   let decrementQty = () =>{
 
     if (quantity > 0) { setQuantity( (prevValue) => prevValue -1);}
